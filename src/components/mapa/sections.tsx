@@ -287,9 +287,10 @@ export function ComoEMentoria() {
       <h2 className="title-section max-w-[24ch]">Individual, e por isso imprevisível no começo.</h2>
       <div className="prose-mapa mt-7 space-y-5">
         <p>
-          Tudo parte do diagnóstico. Antes de qualquer plano, eu preciso entender qual idioma você
-          quer, de onde você está partindo, quanto tempo real você tem numa semana comum e o que
-          você quer poder fazer no idioma daqui a algum tempo.
+          Tudo parte do diagnóstico — a call de 30 minutos que a gente marca pelo WhatsApp. Antes de
+          qualquer plano, eu preciso entender qual idioma você quer, de onde você está partindo,
+          quanto tempo real você tem numa semana comum e o que você quer poder fazer no idioma daqui
+          a algum tempo.
         </p>
         <p>
           A partir daí é acompanhamento próximo: encontros combinados de acordo com a sua rotina,
