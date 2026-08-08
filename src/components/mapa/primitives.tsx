@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 /** Número de WhatsApp — substituir SEUNUMERO pelo número real (ex: 5511999999999). */
 export const WHATSAPP_URL = "https://wa.me/SEUNUMERO";
@@ -21,7 +21,7 @@ export function LogoPlaceholder({ size = "md" }: { size?: "md" | "lg" }) {
           MAPA
         </span>
         <span className="kicker block text-[0.58rem] leading-none text-sage">
-          método do poliglota autodidata
+          método de aprendizado do poliglota autodidata
         </span>
       </span>
     </span>
@@ -55,6 +55,38 @@ export function WhatsAppCta({
   );
 }
 
+/** Marco da Rota: só traçado, preenche quando a rolagem alcança a seção. */
+export function RouteNode() {
+  const ref = useRef<HTMLSpanElement>(null);
+  const [reached, setReached] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setReached(true);
+            observer.disconnect();
+          }
+        }
+      },
+      { rootMargin: "0px 0px -25% 0px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <span
+      ref={ref}
+      aria-hidden="true"
+      className={`route-node ${reached ? "route-node-filled" : ""}`}
+    />
+  );
+}
+
 /**
  * Seção ancorada na Rota: filete vertical discreto na lateral com um marco
  * (nó) no início de cada seção.
@@ -79,7 +111,7 @@ export function Section({
 
   return (
     <section id={id} className="relative scroll-mt-20 py-16 sm:py-24">
-      <span aria-hidden="true" className="route-node" />
+      <RouteNode />
       <div className="pl-6 sm:pl-14">
         {kicker ? <p className={`kicker mb-5 ${accentText}`}>{kicker}</p> : null}
         {children}
