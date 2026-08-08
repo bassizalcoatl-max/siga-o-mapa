@@ -25,11 +25,11 @@ const DESCRIPTION =
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "MAPA · Mentoria individual de idiomas com diagnóstico gratuito" },
+      { title: "MAPA · Método de Aprendizado do Poliglota Autodidata" },
       { name: "description", content: DESCRIPTION },
       {
         property: "og:title",
-        content: "MAPA · Mentoria individual de idiomas com diagnóstico gratuito",
+        content: "MAPA · Método de Aprendizado do Poliglota Autodidata",
       },
       { property: "og:description", content: DESCRIPTION },
     ],

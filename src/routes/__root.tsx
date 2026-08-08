@@ -77,20 +77,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "MAPA · Mentoria individual de idiomas" },
+      { title: "MAPA · Método de Aprendizado do Poliglota Autodidata" },
       {
         name: "description",
         content:
-          "Mentoria individual de idiomas sem promessa de fluência e sem prazo genérico. Chama no WhatsApp para um diagnóstico gratuito.",
+          "Mentoria individual de idiomas. Chama no WhatsApp para um diagnóstico gratuito.",
       },
-      { property: "og:title", content: "MAPA · Mentoria individual de idiomas" },
+      { property: "og:title", content: "MAPA · Método de Aprendizado do Poliglota Autodidata" },
       {
         property: "og:description",
         content:
-          "Mentoria individual de idiomas sem promessa de fluência e sem prazo genérico. Chama no WhatsApp para um diagnóstico gratuito.",
+          "Mentoria individual de idiomas. Chama no WhatsApp para um diagnóstico gratuito.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MAPA · Método de Aprendizado do Poliglota Autodidata" },
+      { name: "twitter:description", content: "Mentoria individual de idiomas. Chama no WhatsApp para um diagnóstico gratuito." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/d997c920-d8b6-4297-b5e3-440077e456e0" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/d997c920-d8b6-4297-b5e3-440077e456e0" },
     ],
     links: [
       {
