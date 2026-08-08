@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   CONTACT_EMAIL,
   LogoPlaceholder,
+  RouteNode,
   WhatsAppCta,
   WHATSAPP_URL,
 } from "@/components/mapa/primitives";
@@ -19,7 +20,7 @@ import {
 } from "@/components/mapa/sections";
 
 const DESCRIPTION =
-  "Mentoria individual de idiomas para quem já tentou e travou ou nunca soube por onde começar. Sem promessa de fluência, sem prazo genérico. Diagnóstico gratuito pelo WhatsApp.";
+  "Mentoria individual de idiomas para quem já tentou e travou ou nunca soube por onde começar. Sem promessa de fluência, sem prazo genérico. Diagnóstico gratuito: uma call de 30 minutos marcada pelo WhatsApp.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -78,17 +79,12 @@ function Index() {
         <div className="relative">
           <span
             aria-hidden="true"
-            className="hero-draw pointer-events-none absolute left-0 top-0 hidden h-full w-px bg-gradient-to-b from-terracota/45 via-creme/12 to-transparent sm:block"
-            style={{ animationDelay: "0.1s" }}
-          />
-          <span
-            aria-hidden="true"
-            className="hero-draw pointer-events-none absolute left-0 top-0 h-full w-px bg-gradient-to-b from-terracota/40 via-creme/10 to-transparent sm:hidden"
+            className="hero-draw pointer-events-none absolute left-0 top-0 h-full w-0.5 bg-gradient-to-b from-terracota/70 via-terracota/40 to-terracota/15"
             style={{ animationDelay: "0.1s" }}
           />
 
           <section className="relative py-20 sm:py-28">
-            <span aria-hidden="true" className="route-node" />
+            <RouteNode />
             <div className="pl-6 sm:pl-14">
               <p
                 className="kicker hero-rise text-sage"
@@ -119,15 +115,16 @@ function Index() {
                 style={{ animationDelay: "1.05s" }}
               >
                 Nenhuma data de fluência prometida, nenhum prazo genérico, nenhuma fórmula. Um
-                diagnóstico primeiro, um caminho depois — o seu.
+                diagnóstico primeiro — uma call de 30 minutos, que a gente marca pelo WhatsApp — e um
+                caminho depois: o seu.
               </p>
               <div
                 className="hero-rise mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
                 style={{ animationDelay: "1.2s" }}
               >
-                <WhatsAppCta>Chama no WhatsApp pro diagnóstico gratuito</WhatsAppCta>
+                <WhatsAppCta>Chama no WhatsApp pra marcar o diagnóstico</WhatsAppCta>
                 <span className="font-sans text-[0.82rem] text-creme/45">
-                  Conversa de uns 30 minutos, sem compromisso.
+                  Call de 30 minutos, gratuita e sem compromisso.
                 </span>
               </div>
             </div>
@@ -136,12 +133,12 @@ function Index() {
           <ParaQuem />
           <ProblemaReal />
           <ProvaViva />
-          <BonusNiveis />
           <ComoFunciona />
           <ComoEMentoria />
           <OQueNaoE />
           <Diagnostico />
           <Faq />
+          <BonusNiveis />
         </div>
       </main>
 
@@ -153,7 +150,7 @@ function Index() {
           </p>
           <div className="mt-7">
             <WhatsAppCta variant="outline">
-              Chama no WhatsApp pro diagnóstico gratuito
+              Chama no WhatsApp pra marcar o diagnóstico
             </WhatsAppCta>
           </div>
           <div className="mt-10 flex flex-col gap-2 border-t border-border pt-7 font-sans text-[0.85rem] text-creme/50 sm:flex-row sm:items-center sm:justify-between">
