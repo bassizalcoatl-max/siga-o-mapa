@@ -62,28 +62,27 @@ export function ProvaViva() {
   return (
     <Section id="prova-viva" kicker="Prova viva" accent="ocre">
       <div className="grid gap-10 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] sm:items-start sm:gap-12">
-        {/* Espaço reservado para a foto — trocar pelo arquivo enviado. */}
-        <figure className="relative" data-photo-placeholder>
+        <figure className="relative">
           <div className="relative">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 hidden translate-x-3 translate-y-3 border border-ocre/45 sm:block"
             />
             <div className="relative aspect-square w-full overflow-hidden border border-creme/15 bg-navy-deep">
+            <img
+              src={retrato.url}
+              alt="Retrato do mentor do MAPA"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover object-top saturate-[0.85] contrast-[1.02]"
+            />
             <div
-              className="absolute inset-0"
+              aria-hidden="true"
+              className="absolute inset-0 mix-blend-soft-light"
               style={{
                 background:
                   "linear-gradient(150deg, color-mix(in oklab, var(--ocre) 24%, transparent), transparent 55%, color-mix(in oklab, var(--plum) 20%, transparent))",
               }}
             />
-            <div className="relative grid h-full place-items-center px-6 text-center">
-              <span className="kicker text-[0.6rem] text-creme/45">
-                espaço reservado
-                <br />
-                para a foto
-              </span>
-            </div>
             </div>
           </div>
           <figcaption className="kicker mt-7 text-[0.6rem] leading-relaxed text-ocre">
