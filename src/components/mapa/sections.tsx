@@ -64,8 +64,12 @@ export function ProvaViva() {
       <div className="grid gap-10 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] sm:items-start sm:gap-12">
         {/* Espaço reservado para a foto — trocar pelo arquivo enviado. */}
         <figure className="relative" data-photo-placeholder>
-          <div className="absolute -bottom-3 -right-3 hidden h-full w-full border border-ocre/45 sm:block" />
-          <div className="relative aspect-square w-full overflow-hidden border border-creme/15 bg-navy-deep">
+          <div className="relative">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 hidden translate-x-3 translate-y-3 border border-ocre/45 sm:block"
+            />
+            <div className="relative aspect-square w-full overflow-hidden border border-creme/15 bg-navy-deep">
             <div
               className="absolute inset-0"
               style={{
@@ -80,8 +84,9 @@ export function ProvaViva() {
                 para a foto
               </span>
             </div>
+            </div>
           </div>
-          <figcaption className="kicker mt-4 text-[0.6rem] text-ocre">
+          <figcaption className="kicker mt-7 text-[0.6rem] leading-relaxed text-ocre">
             fluente em inglês e espanhol · estudando mandarim e francês · engatinhando em coreano e
             catalão
           </figcaption>
