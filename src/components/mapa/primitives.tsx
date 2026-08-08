@@ -1,21 +1,17 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
+import logo from "@/assets/mapa-logo.svg.asset.json";
+
 /** Número de WhatsApp — substituir SEUNUMERO pelo número real (ex: 5511999999999). */
 export const WHATSAPP_URL = "https://wa.me/SEUNUMERO";
 export const CONTACT_EMAIL = "contato@metodomapa.com";
 
-/** Placeholder de logo — trocar pelo SVG real. */
 export function LogoPlaceholder({ size = "md" }: { size?: "md" | "lg" }) {
   const box = size === "lg" ? "h-11 w-11" : "h-9 w-9";
   const label = size === "lg" ? "text-lg" : "text-base";
   return (
-    <span className="flex items-center gap-3" data-logo-placeholder>
-      <span
-        className={`${box} grid shrink-0 place-items-center rounded-sm border border-terracota/60 font-serif text-terracota`}
-        aria-hidden="true"
-      >
-        <span className="text-sm font-bold tracking-tight">M</span>
-      </span>
+    <span className="flex items-center gap-3">
+      <img src={logo.url} alt="MAPA" className={`${box} shrink-0`} />
       <span className="min-w-0">
         <span className={`${label} block font-serif font-bold leading-none tracking-tight`}>
           MAPA
