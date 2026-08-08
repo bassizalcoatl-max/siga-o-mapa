@@ -172,6 +172,7 @@
   body {
     font-family: var(--font-sans);
     font-size: 1.0625rem;
+    font-weight: 300;
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
@@ -227,13 +228,22 @@
 /* --- Assinatura: a Rota (discreta) ----------------------------------- */
 @utility route-node {
   position: absolute;
-  left: -1px;
-  top: 0.6rem;
-  width: 5px;
-  height: 5px;
+  left: 1px;
+  top: 0.55rem;
+  width: 13px;
+  height: 13px;
   border-radius: 999px;
-  background: color-mix(in oklab, var(--terracota) 85%, transparent);
-  transform: translateX(-2px);
+  border: 2px solid color-mix(in oklab, var(--terracota) 85%, transparent);
+  background: var(--navy);
+  transform: translateX(-50%);
+  transition:
+    background-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+@utility route-node-filled {
+  background: color-mix(in oklab, var(--terracota) 90%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--terracota) 14%, transparent);
 }
 
 /* --- Movimento: um único momento orquestrado (hero) ------------------- */
