@@ -162,16 +162,27 @@ const NIVEIS = [
 
 export function BonusNiveis() {
   return (
-    <Section id="bonus" kicker="Bônus gratuito" accent="sage">
-      <h2 className="title-section max-w-[24ch]">A Arquitetura dos 7 Níveis</h2>
-      <p className="lead mt-5 max-w-[34ch] text-creme/85">
+    <Section id="bonus" kicker="Já que você chegou até aqui" accent="sage">
+      <h2 className="title-section max-w-[24ch]">
+        Um presente pra quem leu até o fim: a Arquitetura dos 7 Níveis.
+      </h2>
+      <p className="lead mt-5 max-w-[36ch] text-creme/85">
         Não saber em que nível você está é parte do motivo de você não avançar.
       </p>
-      <p className="prose-mapa mt-6">
-        Um guia curto que mapeia os sete níveis de proficiência em qualquer idioma — o que muda em
-        cada um, e o que costuma travar a passagem para o seguinte. Serve para você localizar onde
-        parou de verdade, antes de qualquer conversa comigo.
-      </p>
+      <div className="prose-mapa mt-6 space-y-4">
+        <p>
+          Não é um PDF de duas páginas. É um guia extenso, em que a fluência aparece dividida em
+          sete níveis distintos, cada um com respaldo em pesquisa científica — porque cada nível
+          corresponde a um estágio cognitivo, neurológico e sociocultural que se repete em qualquer
+          idioma e em qualquer pessoa.
+        </p>
+        <p>
+          Nele você entende o que muda de fato dentro da sua cabeça em cada estágio, o que costuma
+          travar a passagem para o seguinte e por que tanta gente acha que estagnou quando na
+          verdade está no meio de uma transição. Serve para você localizar onde parou de verdade —
+          mesmo que a gente nunca converse.
+        </p>
+      </div>
 
       <ol className="mt-10 max-w-[46ch] divide-y divide-border">
         {NIVEIS.map((nivel) => (
@@ -197,7 +208,7 @@ export function BonusNiveis() {
         }}
       >
         <label htmlFor="email-guia" className="kicker block text-sage">
-          receber o guia por e-mail
+          receber o guia completo por e-mail
         </label>
         <div className="mt-3 flex flex-col gap-3 sm:flex-row">
           <input
@@ -276,9 +287,10 @@ export function ComoEMentoria() {
       <h2 className="title-section max-w-[24ch]">Individual, e por isso imprevisível no começo.</h2>
       <div className="prose-mapa mt-7 space-y-5">
         <p>
-          Tudo parte do diagnóstico. Antes de qualquer plano, eu preciso entender qual idioma você
-          quer, de onde você está partindo, quanto tempo real você tem numa semana comum e o que
-          você quer poder fazer no idioma daqui a algum tempo.
+          Tudo parte do diagnóstico — a call de 30 minutos que a gente marca pelo WhatsApp. Antes de
+          qualquer plano, eu preciso entender qual idioma você quer, de onde você está partindo,
+          quanto tempo real você tem numa semana comum e o que você quer poder fazer no idioma daqui
+          a algum tempo.
         </p>
         <p>
           A partir daí é acompanhamento próximo: encontros combinados de acordo com a sua rotina,
@@ -336,11 +348,17 @@ export function OQueNaoE() {
 export function Diagnostico() {
   return (
     <Section id="diagnostico" kicker="Diagnóstico gratuito" accent="terracota">
-      <h2 className="title-section max-w-[24ch]">Uma conversa de uns 30 minutos. Sem compromisso.</h2>
+      <h2 className="title-section max-w-[26ch]">
+        Uma call de 30 minutos, marcada pelo WhatsApp. Sem compromisso.
+      </h2>
       <div className="prose-mapa mt-7 space-y-5">
         <p>
-          A gente conversa pelo WhatsApp sobre onde você está: o que já tentou, onde travou, quanto
-          tempo você tem, o que te fez querer esse idioma em primeiro lugar. Eu te digo com
+          O WhatsApp é só a porta: você me chama por lá e a gente combina dia e horário. O
+          diagnóstico em si é uma call de cerca de 30 minutos, ao vivo, comigo.
+        </p>
+        <p>
+          Nessa call falamos sobre onde você está: o que já tentou, onde travou, quanto tempo você
+          tem numa semana comum, o que te fez querer esse idioma em primeiro lugar. Eu te digo com
           franqueza o que vejo — inclusive se eu achar que a mentoria não é o que você precisa
           agora.
         </p>
@@ -350,7 +368,7 @@ export function Diagnostico() {
         </p>
       </div>
       <div className="mt-9">
-        <WhatsAppCta>Chama no WhatsApp pro seu diagnóstico gratuito</WhatsAppCta>
+        <WhatsAppCta>Chama no WhatsApp pra marcar o diagnóstico</WhatsAppCta>
       </div>
     </Section>
   );
@@ -379,7 +397,7 @@ const FAQ = [
   },
   {
     q: "Como funciona o diagnóstico gratuito?",
-    a: "É uma conversa de cerca de 30 minutos pelo WhatsApp, sem compromisso, para entender sua situação atual e ver se faz sentido caminharmos juntos.",
+    a: "Você me chama no WhatsApp e a gente combina dia e horário. O diagnóstico é uma call de cerca de 30 minutos, ao vivo e sem compromisso, para entender sua situação atual e ver se faz sentido caminharmos juntos.",
   },
 ];
 
