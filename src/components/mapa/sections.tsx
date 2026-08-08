@@ -1,3 +1,5 @@
+import retrato from "@/assets/retrato.png.asset.json";
+
 import { Section, WhatsAppCta } from "./primitives";
 
 export function ParaQuem() {
