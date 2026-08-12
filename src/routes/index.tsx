@@ -53,15 +53,28 @@ function Index() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 450) {
-        setShowFloatingCta(true);
-      } else {
+      if (window.scrollY <= 450) {
         setShowFloatingCta(false);
+        return;
       }
+      const footer = document.getElementById("footer");
+      if (footer) {
+        const rect = footer.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          setShowFloatingCta(false);
+          return;
+        }
+      }
+      setShowFloatingCta(true);
     };
 
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   return (
@@ -295,7 +308,7 @@ function Index() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-border/60 bg-navy-deep py-16">
+      <footer id="footer" className="border-t border-border/60 bg-navy-deep py-16">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -320,6 +333,9 @@ function Index() {
             </a>
             <span>MAPA · Método de Aprendizado do Poliglota Autodidata</span>
           </div>
+          <p className="mt-6 text-center font-sans text-[0.78rem] text-creme/35">
+            © 2026 MAPA · Todos os direitos reservados.
+          </p>
         </div>
       </footer>
     </div>

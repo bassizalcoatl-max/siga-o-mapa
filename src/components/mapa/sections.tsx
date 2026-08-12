@@ -1,5 +1,4 @@
 import { useState, type FormEvent } from "react";
-import { toast } from "sonner";
 import {
   RotateCcw,
   Compass,
@@ -18,19 +17,17 @@ import {
   ArrowRight,
   Target,
   Layers,
-  HeartHandshake
+  HeartHandshake,
 } from "lucide-react";
 
-import retrato from "@/assets/retrato.png.asset.json";
+import retrato from "@/assets/profilepicmapa.png";
 import mockupGuia from "@/assets/book_smartphone_mockup.webp";
 import { Section, WhatsAppCta } from "./primitives";
 
 export function ParaQuem() {
   return (
     <Section id="para-quem" kicker="Para quem é isso" accent="sage">
-      <h2 className="title-section">
-        Duas histórias diferentes que terminam no mesmo lugar.
-      </h2>
+      <h2 className="title-section">Duas histórias diferentes que terminam no mesmo lugar.</h2>
       <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:gap-8">
         {/* Card 1 */}
         <div className="editorial-card relative overflow-hidden rounded-xl p-6 sm:p-8">
@@ -39,9 +36,9 @@ export function ParaQuem() {
           </div>
           <h3 className="title-sub text-creme">Você já tentou antes</h3>
           <p className="prose-mapa mt-3 text-[0.98rem] leading-relaxed">
-            Comprou o curso, assistiu às primeiras aulas, talvez tenha chegado longe. Em algum
-            ponto parou - o método não cabia na sua rotina, o conteúdo não tinha nada a ver com a
-            sua vida, a empolgação secou. Ficou a sensação de que o problema era você.
+            Comprou o curso, assistiu às primeiras aulas, talvez tenha chegado longe. Em algum ponto
+            parou - o método não cabia na sua rotina, o conteúdo não tinha nada a ver com a sua
+            vida, a empolgação secou. Ficou a sensação de que o problema era você.
           </p>
           <div className="mt-6 border-t border-border/40 pt-4 font-serif text-xs italic text-sage/80">
             "Ficou a sensação de que o problema era você."
@@ -74,7 +71,7 @@ export function ProblemaReal() {
       <h2 className="title-section">
         Quase nenhum método falha por falta de conteúdo. Falha por falta de estrutura.
       </h2>
-      
+
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         <div className="editorial-card rounded-xl p-6">
           <span className="font-serif text-2xl font-bold text-ocre/70">01</span>
@@ -91,10 +88,10 @@ export function ProblemaReal() {
           <span className="font-serif text-2xl font-bold text-ocre/70">02</span>
           <h3 className="mt-2 font-serif text-lg font-bold text-creme">Vocabulário de Turista</h3>
           <p className="prose-mapa mt-3 text-[0.94rem]">
-            Depois vem o vocabulário de turista. Você aprende a pedir a conta e a perguntar onde fica
-            a estação, mas não consegue falar do seu trabalho, da sua família, daquilo que você faria
-            na língua se pudesse. O idioma nunca encosta na sua vida real, e o que não encosta na
-            vida não gruda na memória.
+            Depois vem o vocabulário de turista. Você aprende a pedir a conta e a perguntar onde
+            fica a estação, mas não consegue falar do seu trabalho, da sua família, daquilo que você
+            faria na língua se pudesse. O idioma nunca encosta na sua vida real, e o que não encosta
+            na vida não gruda na memória.
           </p>
         </div>
 
@@ -103,9 +100,9 @@ export function ProblemaReal() {
           <h3 className="mt-2 font-serif text-lg font-bold text-creme">Promessas & Gamificação</h3>
           <p className="prose-mapa mt-3 text-[0.94rem]">
             Some a isso a promessa de fluência em prazo fixo - que ignora ponto de partida, rotina e
-            objetivo - e a gamificação que troca aprendizado por sequência de dias. Ofuscante por uma
-            semana, irrelevante no segundo mês. Quando a motivação baixa, e ela sempre baixa, não
-            sobra nada segurando você.
+            objetivo - e a gamificação que troca aprendizado por sequência de dias. Ofuscante por
+            uma semana, irrelevante no segundo mês. Quando a motivação baixa, e ela sempre baixa,
+            não sobra nada segurando você.
           </p>
         </div>
       </div>
@@ -113,7 +110,8 @@ export function ProblemaReal() {
       {/* Destaque Editorial Quote */}
       <div className="mt-10 rounded-xl bg-terracota p-6 sm:p-8 shadow-xl text-creme">
         <blockquote className="font-serif text-lg italic sm:text-xl">
-          "O idioma nunca encosta na sua vida real, e o que não encosta na vida não gruda na memória."
+          "O idioma nunca encosta na sua vida real, e o que não encosta na vida não gruda na
+          memória."
         </blockquote>
       </div>
     </Section>
@@ -128,7 +126,7 @@ export function ProvaViva() {
           <div className="group relative overflow-hidden rounded-2xl border border-creme/20 bg-navy-card p-2 shadow-2xl">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl bg-navy-deep">
               <img
-                src={retrato.url}
+                src={retrato}
                 alt="Retrato do mentor do MAPA"
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover object-top saturate-[0.9] transition-transform duration-700 group-hover:scale-105"
@@ -142,7 +140,7 @@ export function ProvaViva() {
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-transparent opacity-80" />
-              
+
               <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-creme/10 bg-navy-deep/85 p-3 backdrop-blur-md">
                 <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-ocre">
                   <span className="h-2 w-2 rounded-full bg-ocre animate-pulse" />
@@ -162,7 +160,8 @@ export function ProvaViva() {
 
         <div>
           <h2 className="title-section text-creme">
-            Se você já desistiu de um idioma, saiba: <em className="text-ocre font-serif italic">eu também.</em>
+            Se você já desistiu de um idioma, saiba:{" "}
+            <em className="text-ocre font-serif italic">eu também.</em>
           </h2>
           <p className="lead mt-6 text-creme/90">
             Eu aprendi inglês sozinho por prazer, mas levei tempo até a fluência. Depois abandonei
@@ -170,9 +169,7 @@ export function ProvaViva() {
             existe método milagroso, sistema infalível nem nada do tipo. Aprender um idioma não
             envolve dom, inspiração e nem mesmo perfeição - basta um método que caiba na sua vida e
             na sua realidade.
-            <span className="mt-4 block text-ocre">
-              O resto do percurso, conto abaixo.
-            </span>
+            <span className="mt-4 block text-ocre">O resto do percurso, conto abaixo.</span>
           </p>
         </div>
       </div>
@@ -180,20 +177,20 @@ export function ProvaViva() {
       <div className="prose-mapa mt-10 space-y-6 text-[1.02rem]">
         <p>
           O inglês chegou primeiro: na adolescência, sozinho, movido só por curiosidade - eu queria
-          entender as letras das bandas que ouvia e as piadas que a legenda não traduzia. Funcionou, mas
-          levei mais de cinco anos para perceber que aquilo tinha virado fluência.
+          entender as letras das bandas que ouvia e as piadas que a legenda não traduzia. Funcionou,
+          mas levei mais de cinco anos para perceber que aquilo tinha virado fluência.
         </p>
         <p>
           Anos depois, já adulto, tentei outro idioma do jeito convencional: comprei o curso,
-          comecei animado e abandonei no meio do caminho. Passei muito tempo achando que o
-          problema era eu, até entender que me faltava um sistema que respeitasse como meu
-          cérebro realmente aprende e que se adaptasse à minha rotina - não o contrário.
+          comecei animado e abandonei no meio do caminho. Passei muito tempo achando que o problema
+          era eu, até entender que me faltava um sistema que respeitasse como meu cérebro realmente
+          aprende e que se adaptasse à minha rotina - não o contrário.
         </p>
         <p>
-          Hoje, enquanto estudo mandarim e francês (e engatinho no coreano e no catalão), me
-          dedico a investigar o processo de aprender idiomas. Não como linguista de formação,
-          mas como alguém que testa métodos na prática, lê a pesquisa acadêmica com seriedade e
-          organiza os padrões que observa. O que encontrei não foi uma fórmula. Foi um mapa.
+          Hoje, enquanto estudo mandarim e francês (e engatinho no coreano e no catalão), me dedico
+          a investigar o processo de aprender idiomas. Não como linguista de formação, mas como
+          alguém que testa métodos na prática, lê a pesquisa acadêmica com seriedade e organiza os
+          padrões que observa. O que encontrei não foi uma fórmula. Foi um mapa.
         </p>
       </div>
     </Section>
@@ -223,16 +220,29 @@ export function ComoFunciona() {
   ];
 
   const accentStyles = {
-    sage: { border: "border-sage/40", text: "text-sage", bg: "bg-sage/10", glow: "hover:border-sage/70" },
-    ocre: { border: "border-ocre/40", text: "text-ocre", bg: "bg-ocre/10", glow: "hover:border-ocre/70" },
-    plum: { border: "border-plum/40", text: "text-plum", bg: "bg-plum/10", glow: "hover:border-plum/70" },
+    sage: {
+      border: "border-sage/40",
+      text: "text-sage",
+      bg: "bg-sage/10",
+      glow: "hover:border-sage/70",
+    },
+    ocre: {
+      border: "border-ocre/40",
+      text: "text-ocre",
+      bg: "bg-ocre/10",
+      glow: "hover:border-ocre/70",
+    },
+    plum: {
+      border: "border-plum/40",
+      text: "text-plum",
+      bg: "bg-plum/10",
+      glow: "hover:border-plum/70",
+    },
   };
 
   return (
     <Section id="metodo" kicker="Como funciona o MAPA" accent="terracota">
-      <h2 className="title-section">
-        Existe estrutura por trás. Não é intuição minha.
-      </h2>
+      <h2 className="title-section">Existe estrutura por trás. Não é intuição minha.</h2>
       <p className="prose-mapa mt-6 text-[1.05rem]">
         O método inteiro se desdobra dentro da mentoria, no seu caso específico. Mas três pilares
         sustentam tudo o resto - e dá para explicar os três sem enrolação:
@@ -248,7 +258,9 @@ export function ComoFunciona() {
               className={`editorial-card group relative flex flex-col justify-between rounded-xl p-6 sm:p-7 transition-all ${style.glow}`}
             >
               <div>
-                <div className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl ${style.bg} ${style.text}`}>
+                <div
+                  className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl ${style.bg} ${style.text}`}
+                >
                   <IconComponent className="h-6 w-6" />
                 </div>
                 <h3 className={`title-sub ${style.text}`}>{p.t}</h3>
@@ -266,7 +278,7 @@ export function ComoEMentoria() {
   return (
     <Section id="mentoria" kicker="Como é a mentoria" accent="sage">
       <h2 className="title-section">Individual, e por isso imprevisível no começo.</h2>
-      
+
       <div className="prose-mapa mt-7 space-y-5 text-[1.02rem]">
         <p>
           Tudo parte do diagnóstico - a call de 30 minutos que a gente marca pelo WhatsApp. Antes de
@@ -286,26 +298,38 @@ export function ComoEMentoria() {
       <div className="mt-10 grid gap-4 sm:grid-cols-3">
         <div className="editorial-card rounded-xl p-5">
           <div className="flex items-center gap-3">
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sage/20 font-serif text-xs font-bold text-sage">1</span>
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sage/20 font-serif text-xs font-bold text-sage">
+              1
+            </span>
             <h4 className="font-sans text-sm font-semibold text-creme">Diagnóstico 30m</h4>
           </div>
-          <p className="mt-2 text-xs text-creme/70">Call ao vivo no WhatsApp para entender seu ponto de partida e rotina real.</p>
+          <p className="mt-2 text-xs text-creme/70">
+            Call ao vivo no WhatsApp para entender seu ponto de partida e rotina real.
+          </p>
         </div>
 
         <div className="editorial-card rounded-xl p-5">
           <div className="flex items-center gap-3">
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sage/20 font-serif text-xs font-bold text-sage">2</span>
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sage/20 font-serif text-xs font-bold text-sage">
+              2
+            </span>
             <h4 className="font-sans text-sm font-semibold text-creme">Construção da Rota</h4>
           </div>
-          <p className="mt-2 text-xs text-creme/70">Plano individualizado focado na sua vida e no que você realmente quer falar.</p>
+          <p className="mt-2 text-xs text-creme/70">
+            Plano individualizado focado na sua vida e no que você realmente quer falar.
+          </p>
         </div>
 
         <div className="editorial-card rounded-xl p-5">
           <div className="flex items-center gap-3">
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sage/20 font-serif text-xs font-bold text-sage">3</span>
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-sage/20 font-serif text-xs font-bold text-sage">
+              3
+            </span>
             <h4 className="font-sans text-sm font-semibold text-creme">Acompanhamento</h4>
           </div>
-          <p className="mt-2 text-xs text-creme/70">Presença constante entre encontros para destravar qualquer obstáculo.</p>
+          <p className="mt-2 text-xs text-creme/70">
+            Presença constante entre encontros para destravar qualquer obstáculo.
+          </p>
         </div>
       </div>
 
@@ -328,13 +352,12 @@ export function ComoEMentoria() {
 }
 
 const NAO_E = [
-  "Não prometo fluência. Prometo processo e acompanhamento.",
+  "Não prometo fluência. Prometo processo estruturado e acompanhamento.",
   "Não trabalho com prazo fixo, porque ninguém honesto consegue prever o seu.",
-  "Motivação é clima, não combustível - não vendo picos de empolgação.",
-  "Não é curso gravado genérico servido para todo mundo igual.",
-  "Não é gamificação disfarçada de método.",
+  "Não vendo picos de empolgação. Motivação é clima, não combustível.",
+  "Não é um curso gravado servido igual para todo mundo, é algo personalizado.",
+  "Não é gamificação disfarçada: sequência de dias não ensina, só empolga.",
   "Não é conduzido por inteligência artificial. Sou eu, conversando com você.",
-  "Não falo mal de concorrente para parecer melhor do que sou.",
 ];
 
 export function OQueNaoE() {
@@ -347,19 +370,27 @@ export function OQueNaoE() {
       className="rounded-3xl bg-creme text-navy"
     >
       <h2 className="title-section text-navy">Os inegociáveis, ditos antes de você perguntar.</h2>
-      
+
       <div className="mt-9 grid gap-4 sm:grid-cols-2">
-        {NAO_E.map((item, idx) => (
-          <div
-            key={item}
-            className="editorial-card flex items-start gap-4 rounded-xl border-navy/15 p-5 transition-all hover:border-plum/50"
-          >
-            <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-plum/20 text-plum font-serif font-bold text-sm">
-              ✕
+        {NAO_E.map((item) => {
+          const rest = item.replace(/^Não\s+/, "");
+          return (
+            <div
+              key={item}
+              className="editorial-card flex items-start gap-4 rounded-xl border-navy/15 p-5 transition-all hover:border-plum/50"
+            >
+              <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-plum/20 text-plum font-serif font-bold text-sm">
+                ✕
+              </div>
+              <span className="prose-mapa text-[0.98rem] leading-snug">
+                <strong className="font-sans font-extrabold uppercase tracking-wide text-creme">
+                  não
+                </strong>{" "}
+                {rest}
+              </span>
             </div>
-            <span className="prose-mapa text-[0.98rem] leading-snug">{item}</span>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </Section>
   );
@@ -385,10 +416,9 @@ export function Diagnostico() {
               diagnóstico em si é uma call de cerca de 30 minutos, ao vivo, comigo.
             </p>
             <p>
-              Nessa call falamos sobre onde você está: o que já tentou, onde travou, quanto tempo você
-              tem numa semana comum, o que te fez querer esse idioma. Eu te digo com
-              franqueza o que vejo - inclusive se eu achar que a mentoria não é o que você precisa
-              agora.
+              Nessa call falamos sobre onde você está: o que já tentou, onde travou, quanto tempo
+              você tem numa semana comum, o que te fez querer esse idioma. Eu te digo com franqueza
+              o que vejo - inclusive se eu achar que a mentoria não é o que você precisa agora.
             </p>
             <p>
               Não tem formulário longo, robô fazendo triagem nem sequência de e-mails depois. É uma
@@ -397,9 +427,7 @@ export function Diagnostico() {
           </div>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <WhatsAppCta variant="solid">
-              Chama no WhatsApp pra marcar o diagnóstico
-            </WhatsAppCta>
+            <WhatsAppCta variant="solid">Chama no WhatsApp pra marcar o diagnóstico</WhatsAppCta>
           </div>
         </div>
       </div>
@@ -440,7 +468,7 @@ export function Faq() {
   return (
     <Section id="faq" kicker="Perguntas" accent="ocre">
       <h2 className="title-section">O que costumam me perguntar</h2>
-      
+
       <div className="mt-9 grid gap-4">
         {FAQ.map((item, idx) => {
           const isOpen = openIndex === idx;
@@ -519,45 +547,68 @@ export function BonusNiveis() {
   const [activeNivel, setActiveNivel] = useState(0);
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "idle" | "success" | "error";
+    message: string;
+  }>({ type: "idle", message: "" });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!email) return;
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      toast.success("Guia dos 7 Níveis enviado com sucesso!", {
-        description: `Enviamos o material completo para ${email}.`,
+    setStatus({ type: "idle", message: "" });
+    try {
+      const res = await fetch("/.netlify/functions/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json().catch(() => null);
+      if (!res.ok || !data?.success) {
+        setStatus({
+          type: "error",
+          message: data?.error || "Não consegui enviar o guia agora. Tenta de novo em instantes.",
+        });
+        return;
+      }
+      setStatus({
+        type: "success",
+        message: `Guia tá a caminho! Confere sua caixa de entrada (${email}).`,
       });
       setEmail("");
-    }, 600);
+    } catch {
+      setStatus({
+        type: "error",
+        message: "Erro de conexão. Tenta de novo em instantes.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
     <Section id="bonus" kicker="Já que você chegou até aqui" accent="sage">
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start lg:gap-14">
         <div>
-          <h2 className="title-section">
-            Um presente pra você que chegou até aqui.
-          </h2>
+          <h2 className="title-section">Um presente pra você que chegou até aqui.</h2>
           <p className="lead mt-5 text-creme/85">
-            Não saber em que nível você está é parte do motivo de você não avançar e pra
-            te ajudar nisso, trazemos aqui um pequeno guia abordando os Sete Níveis de
-            Proficiência de qualquer idioma.
+            Não saber em que nível você está é parte do motivo de você não avançar e pra te ajudar
+            nisso, trazemos aqui um pequeno guia abordando os Sete Níveis de Proficiência de
+            qualquer idioma.
           </p>
 
           <div className="prose-mapa mt-6 space-y-4 text-[1.02rem]">
             <p>
               Não é um PDF de duas páginas. É um guia extenso, em que a fluência aparece dividida em
               sete níveis distintos, cada um com respaldo em pesquisa científica - porque cada nível
-              corresponde a um estágio cognitivo, neurológico e sociocultural que se repete em qualquer
-              idioma e em qualquer pessoa.
+              corresponde a um estágio cognitivo, neurológico e sociocultural que se repete em
+              qualquer idioma e em qualquer pessoa.
             </p>
             <p>
               Nele você entende o que muda dentro da sua cabeça em cada estágio, o que costuma
               travar a passagem para o seguinte e por que tanta gente acha que estagnou quando na
-              verdade está no meio de uma transição. Serve para você localizar onde parou de verdade -
-              mesmo que a gente nunca converse.
+              verdade está no meio de uma transição. Serve para você localizar onde parou de verdade
+              - mesmo que a gente nunca converse.
             </p>
           </div>
         </div>
@@ -612,12 +663,8 @@ export function BonusNiveis() {
           return (
             <div className="mt-6 rounded-xl border border-terracota/20 bg-navy-deep/90 p-5 sm:p-6 transition-all">
               <div className="flex items-center gap-3">
-                <span className="font-serif text-2xl font-bold text-terracota">
-                  {current.n}
-                </span>
-                <h4 className="font-sans text-lg font-bold text-creme">
-                  {current.t}
-                </h4>
+                <span className="font-serif text-2xl font-bold text-terracota">{current.n}</span>
+                <h4 className="font-sans text-lg font-bold text-creme">{current.t}</h4>
               </div>
               <p className="prose-mapa mt-3 text-[1rem] leading-relaxed text-creme/90">
                 {current.d}
@@ -630,9 +677,8 @@ export function BonusNiveis() {
       {/* Formulário */}
       <div className="mt-12 max-w-[48ch]">
         <p className="prose-mapa text-[1.02rem] leading-relaxed text-creme/85">
-          É um guia para usar, não para acumular: dá para ler numa pausa do dia ou no trajeto
-          para o trabalho e, antes de terminar, você já sai com clareza do seu próximo passo
-          no idioma.
+          É um guia para usar, não para acumular: dá para ler numa pausa do dia ou no trajeto para o
+          trabalho e, antes de terminar, você já sai com clareza do seu próximo passo no idioma.
         </p>
 
         <form className="mt-6" onSubmit={handleSubmit}>
@@ -669,6 +715,16 @@ export function BonusNiveis() {
             Só o guia e, de vez em quando, algo que eu ache que vale seu tempo. Nada de disparo
             diário.
           </p>
+          {status.type !== "idle" && (
+            <p
+              role="status"
+              className={`mt-3 font-sans text-[0.9rem] font-medium ${
+                status.type === "success" ? "text-sage" : "text-terracota"
+              }`}
+            >
+              {status.message}
+            </p>
+          )}
         </form>
       </div>
     </Section>

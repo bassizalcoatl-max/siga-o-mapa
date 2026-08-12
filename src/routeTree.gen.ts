@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as Guia7NiveisRouteImport } from './routes/guia-7-niveis'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Guia7NiveisRoute = Guia7NiveisRouteImport.update({
+  id: '/guia-7-niveis',
+  path: '/guia-7-niveis',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/guia-7-niveis': typeof Guia7NiveisRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/guia-7-niveis': typeof Guia7NiveisRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/guia-7-niveis': typeof Guia7NiveisRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/guia-7-niveis'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/guia-7-niveis'
+  id: '__root__' | '/' | '/guia-7-niveis'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  Guia7NiveisRoute: typeof Guia7NiveisRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/guia-7-niveis': {
+      id: '/guia-7-niveis'
+      path: '/guia-7-niveis'
+      fullPath: '/guia-7-niveis'
+      preLoaderRoute: typeof Guia7NiveisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  Guia7NiveisRoute: Guia7NiveisRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

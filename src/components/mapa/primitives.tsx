@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import logo from "@/assets/mapa-logo.svg.asset.json";
+import logo from "@/assets/0-mapa-invertida.svg";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 /** Número de WhatsApp - substituir SEUNUMERO pelo número real (ex: 5511999999999). */
 export const WHATSAPP_URL = "https://wa.me/554488090350";
-export const CONTACT_EMAIL = "contato@metodomapa.com";
+export const CONTACT_EMAIL = "contato@sigaomapa.com.br";
 
 export function LogoPlaceholder({ size = "md" }: { size?: "md" | "lg" }) {
   const box = size === "lg" ? "h-11 w-11" : "h-9 w-9";
@@ -13,7 +13,7 @@ export function LogoPlaceholder({ size = "md" }: { size?: "md" | "lg" }) {
     <span className="group flex items-center gap-3.5 transition-transform duration-200 hover:scale-[1.01]">
       <div className="relative">
         <img
-          src={logo.url}
+          src={logo}
           alt="MAPA"
           className={`${box} shrink-0 transition-transform duration-300 group-hover:rotate-6`}
         />
