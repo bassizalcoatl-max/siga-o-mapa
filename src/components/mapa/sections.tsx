@@ -463,38 +463,38 @@ export function Faq() {
 const NIVEIS = [
   {
     n: "01",
-    t: "Contato",
-    d: "O idioma ainda é ruído organizado. Você reconhece que é uma língua, não o que ela diz.",
+    t: "Repertório de Roteiros Sociais",
+    d: "O aprendiz não processa a língua ativamente, apenas reproduz frases decoradas como um ator lendo um roteiro. A sensação de proficiência dura segundos, pois não há capacidade de lidar com imprevistos.",
   },
   {
     n: "02",
-    t: "Reconhecimento",
-    d: "Palavras começam a se separar do fluxo. Você identifica antes de compreender.",
+    t: "Compreensão em Contexto Controlado",
+    d: "A língua começa a ter utilidade prática — desde que o interlocutor colabore (fale devagar, de forma clara, com vocabulário simples). O aprendiz realiza transações previsíveis e consegue ler placas, menus e formulários.",
   },
   {
     n: "03",
-    t: "Compreensão apoiada",
-    d: "Você entende com contexto, imagem, legenda ou repetição ajudando.",
+    t: "Muralha da Dicção Natural",
+    d: "O abismo mais longo. O aprendiz já se comunica bem, mas a fala nativa em velocidade real é incompreensível. O que se entende por escrito vira ruído. O cérebro entra em sobrecarga cognitiva.",
   },
   {
     n: "04",
-    t: "Compreensão autônoma",
-    d: "O sentido chega sem apoio, mesmo com lacunas — e as lacunas param de assustar.",
+    t: "Autonomia Cognitiva e Improviso",
+    d: "A tradução mental e o ensaio antes de falar desaparecem. Quando falta uma palavra, o aprendiz improvisa. Legendas viram opcionais. Ainda há erros e alguma perda em tópicos abstratos, mas o fluxo é natural.",
   },
   {
     n: "05",
-    t: "Produção funcional",
-    d: "Você diz o que precisa dizer, do seu jeito, com erros que não impedem a conversa.",
+    t: "Ancoragem Permanente",
+    d: "O nível da fixação vitalícia. A língua se ancora de tal forma que você pode parar por anos e não esquecer. Mídia nativa flui sem esforço, nativos não trocam mais de idioma. A língua é vivida e não mais apenas estudada.",
   },
   {
     n: "06",
-    t: "Produção pessoal",
-    d: "Você fala do que importa para você: trabalho, afeto, opinião, humor.",
+    t: "Versatilidade Dialetal e Regional",
+    d: "O idioma deixa de ser monolítico. O aprendiz entende sotaques fortes, variantes regionais e gírias locais sem pedir para repetir — seus ouvidos abraçam o ecossistema completo, mesmo que ele não fale todos os dialetos.",
   },
   {
     n: "07",
-    t: "Vida no idioma",
-    d: "A língua deixa de ser matéria de estudo e passa a ser lugar onde você existe.",
+    t: "Integração e Pertencimento",
+    d: "O topo. Ninguém mais lembra que o aprendiz é estrangeiro — e isso tem a ver com pertencimento, não perfeição. Suas piadas funcionam pelo conteúdo e o sotaque, se ainda existe, tornou-se irrelevante.",
   },
 ];
 
@@ -519,10 +519,12 @@ export function BonusNiveis() {
   return (
     <Section id="bonus" kicker="Já que você chegou até aqui" accent="sage">
       <h2 className="title-section max-w-[24ch]">
-        Um presente pra quem leu até o fim: a Arquitetura dos 7 Níveis.
+        Um presente pra você que chegou até aqui.
       </h2>
       <p className="lead mt-5 max-w-[36ch] text-creme/85">
-        Não saber em que nível você está é parte do motivo de você não avançar.
+        Não saber em que nível você está é parte do motivo de você não avançar e pra
+        te ajudar nisso, trazemos aqui um pequeno guia abordando os Sete Níveis de
+        Proficiência de qualquer idioma.
       </p>
       
       <div className="prose-mapa mt-6 space-y-4 text-[1.02rem]">
