@@ -1,3 +1,6 @@
+[functions]
+directory = "netlify/functions"
+
 [[redirects]]
   from = "/guia-7-niveis"
   to = "/index.html"
