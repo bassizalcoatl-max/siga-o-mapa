@@ -4,23 +4,37 @@ const SITE_URL = process.env.SITE_URL || "https://sigaomapa.com.br";
 const GUIDE_URL = `${SITE_URL}/guia-7-niveis`;
 const FROM = process.env.RESEND_FROM || "MAPA <onboarding@resend.dev>";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export const handler = async (event) => {
   if (event.httpMethod !== "POST") {
-    return json({ error: "Método não permitido." }, 405);
+    return json({ error: "Método não permitido. Use POST." }, 405);
   }
 
   let email;
   try {
     const body = JSON.parse(event.body || "{}");
-    email = String(body.email ?? "").trim().toLowerCase();
+    email = String(body.email ?? "")
+      .trim()
+      .toLowerCase();
   } catch {
-    return json({ error: "Corpo da requisição inválido." }, 400);
+    return json(
+      { error: "Corpo da requisição inválido: esperava um JSON com o campo email." },
+      400,
+    );
   }
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
     return json({ error: "Esse e-mail não parece válido. Confere e tenta de novo?" }, 400);
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    return json(
+      {
+        error:
+          "Servidor sem RESEND_API_KEY configurada. Adicione a variável de ambiente no Netlify.",
+      },
+      500,
+    );
   }
 
   const html = `<!DOCTYPE html>
@@ -49,6 +63,7 @@ export const handler = async (event) => {
 </html>`;
 
   try {
+    const resend = new Resend(apiKey);
     const { data, error } = await resend.emails.send({
       from: FROM,
       to: email,
@@ -57,14 +72,17 @@ export const handler = async (event) => {
     });
 
     if (error) {
-      console.error("[subscribe] Resend error:", error);
-      return json({ error: "Não consegui enviar o guia agora. Tenta de novo em instantes." }, 500);
+      console.error("[submit-email] Resend error:", error);
+      const detail =
+        error && error.message ? String(error.message) : "erro de envio do provedor de e-mail";
+      return json({ error: `O provedor de e-mail recusou o envio: ${detail}` }, 500);
     }
 
-    return json({ success: true, id: data?.id });
+    return json({ message: "sucesso" });
   } catch (err) {
-    console.error("[subscribe] Unexpected error:", err);
-    return json({ error: "Erro inesperado. Tenta de novo em instantes." }, 500);
+    console.error("[submit-email] Unexpected error:", err);
+    const detail = err instanceof Error ? err.message : String(err);
+    return json({ error: `Falha ao enviar o e-mail: ${detail}` }, 500);
   }
 };
 

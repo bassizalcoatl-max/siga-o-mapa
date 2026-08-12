@@ -557,13 +557,13 @@ export function BonusNiveis() {
     setSubmitting(true);
     setStatus({ type: "idle", message: "" });
     try {
-      const res = await fetch("/.netlify/functions/subscribe", {
+      const res = await fetch("/.netlify/functions/submit-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
       const data = await res.json().catch(() => null);
-      if (!res.ok || !data?.success) {
+      if (!res.ok || data?.message !== "sucesso") {
         setStatus({
           type: "error",
           message: data?.error || "Não consegui enviar o guia agora. Tenta de novo em instantes.",
