@@ -338,13 +338,12 @@ export function ComoEMentoria() {
           <HeartHandshake className="h-5 w-5 text-sage" />
           <p className="kicker text-sage">sobre investimento</p>
         </div>
-        <p className="lead mt-3 max-w-[32ch] text-creme">
-          Cada jornada é diferente, então o valor também é.
-        </p>
+        <p className="lead mt-3 text-creme">Combinado só depois de te conhecer.</p>
         <p className="prose-mapa mt-4 text-[0.98rem]">
-          O investimento é definido individualmente depois do diagnóstico, considerando idioma,
-          ponto de partida e objetivo. Isso é combinado com você, não antes de eu te conhecer -
-          porque não é um produto padronizado.
+          Como cada jornada é diferente, não existe valor de prateleira. O investimento é definido
+          individualmente depois do diagnóstico, considerando idioma, ponto de partida e objetivo.
+          Não é tática de barganha pra parecer mais em conta: um serviço personalizado não tem como
+          ser precificado antes de eu te conhecer de verdade.
         </p>
       </div>
     </Section>
@@ -398,9 +397,9 @@ export function OQueNaoE() {
 
 export function Diagnostico() {
   return (
-    <Section id="diagnostico" kicker="Diagnóstico gratuito" accent="terracota">
+    <Section id="diagnostico" kicker="Diagnóstico gratuito" accent="terracota" padX="px-7 sm:px-16">
       <div className="editorial-card relative overflow-hidden rounded-2xl border border-terracota/30 bg-gradient-to-br from-navy-card via-navy-raised to-navy-deep p-8 sm:p-12 shadow-2xl">
-        <div className="relative z-10 max-w-2xl">
+        <div className="relative z-10">
           <div className="inline-flex items-center gap-2 rounded-full border border-terracota/40 bg-terracota/10 px-3.5 py-1 text-xs font-semibold text-terracota mb-4">
             <span className="h-2 w-2 rounded-full bg-terracota animate-pulse" />
             Call individual ao vivo
@@ -675,7 +674,7 @@ export function BonusNiveis() {
       </div>
 
       {/* Formulário */}
-      <div className="mt-12 max-w-[48ch]">
+      <div className="mt-12">
         <p className="prose-mapa text-[1.02rem] leading-relaxed text-creme/85">
           É um guia para usar, não para acumular: dá para ler numa pausa do dia ou no trajeto para o
           trabalho e, antes de terminar, você já sai com clareza do seu próximo passo no idioma.
