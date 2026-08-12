@@ -116,7 +116,7 @@
 @utility headline {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: clamp(2.5rem, 6.5vw, 4.6rem);
+  font-size: clamp(2.25rem, 5.6vw, 4rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
 }
@@ -154,7 +154,6 @@
 
 @utility prose-mapa {
   color: color-mix(in oklab, var(--creme) 78%, transparent);
-  max-width: 65ch;
   line-height: 1.8;
 }
 
@@ -162,7 +161,6 @@
 @utility route-node {
   position: absolute;
   left: 1px;
-  top: 0.65rem;
   width: 15px;
   height: 15px;
   border-radius: 999px;

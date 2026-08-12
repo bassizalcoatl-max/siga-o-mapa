@@ -2,8 +2,8 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import logo from "@/assets/mapa-logo.svg.asset.json";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
-/** Número de WhatsApp — substituir SEUNUMERO pelo número real (ex: 5511999999999). */
-export const WHATSAPP_URL = "https://wa.me/SEUNUMERO";
+/** Número de WhatsApp - substituir SEUNUMERO pelo número real (ex: 5511999999999). */
+export const WHATSAPP_URL = "https://wa.me/554488090350";
 export const CONTACT_EMAIL = "contato@metodomapa.com";
 
 export function LogoPlaceholder({ size = "md" }: { size?: "md" | "lg" }) {
@@ -67,34 +67,33 @@ export function WhatsAppCta({
   );
 }
 
-/** Marco da Rota: só traçado, preenche quando a rolagem alcança a seção. */
-export function RouteNode() {
+/** Marco da Rota: preenche quando o topo da seção cruza a metade da altura da tela. */
+export function RouteNode({ className = "" }: { className?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const [reached, setReached] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setReached(true);
-            observer.disconnect();
-          }
-        }
-      },
-      { rootMargin: "0px 0px -25% 0px" },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
+    const update = () => {
+      const bounds = el.getBoundingClientRect();
+      const threshold = window.innerHeight * 0.5;
+      setReached(bounds.top < threshold);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
   }, []);
 
   return (
     <span
       ref={ref}
       aria-hidden="true"
-      className={`route-node ${reached ? "route-node-filled" : ""}`}
+      className={`route-node ${reached ? "route-node-filled" : ""} ${className}`}
     />
   );
 }
@@ -107,12 +106,14 @@ export function Section({
   id,
   kicker,
   accent = "terracota",
+  padX = "pl-7 sm:pl-16",
   children,
   className = "",
 }: {
   id: string;
   kicker?: string;
   accent?: "terracota" | "sage" | "ocre" | "plum";
+  padX?: string;
   children: ReactNode;
   className?: string;
 }) {
@@ -131,9 +132,9 @@ export function Section({
   }[accent];
 
   return (
-    <section id={id} className={`relative scroll-mt-24 py-16 sm:py-24 ${className}`}>
-      <RouteNode />
-      <div className="pl-7 sm:pl-16">
+    <section id={id} className={`relative scroll-mt-24 py-12 sm:py-16 ${className}`}>
+      <RouteNode className="top-14 sm:top-[4.5rem]" />
+      <div className={padX}>
         {kicker ? (
           <div className="mb-5 inline-flex items-center gap-2">
             <span

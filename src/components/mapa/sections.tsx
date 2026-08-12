@@ -22,12 +22,13 @@ import {
 } from "lucide-react";
 
 import retrato from "@/assets/retrato.png.asset.json";
+import mockupGuia from "@/assets/book_smartphone_mockup.webp";
 import { Section, WhatsAppCta } from "./primitives";
 
 export function ParaQuem() {
   return (
     <Section id="para-quem" kicker="Para quem é isso" accent="sage">
-      <h2 className="title-section max-w-[22ch]">
+      <h2 className="title-section">
         Duas histórias diferentes que terminam no mesmo lugar.
       </h2>
       <div className="mt-10 grid gap-6 sm:grid-cols-2 sm:gap-8">
@@ -39,7 +40,7 @@ export function ParaQuem() {
           <h3 className="title-sub text-creme">Você já tentou antes</h3>
           <p className="prose-mapa mt-3 text-[0.98rem] leading-relaxed">
             Comprou o curso, assistiu às primeiras aulas, talvez tenha chegado longe. Em algum
-            ponto parou — o método não cabia na sua rotina, o conteúdo não tinha nada a ver com a
+            ponto parou - o método não cabia na sua rotina, o conteúdo não tinha nada a ver com a
             sua vida, a empolgação secou. Ficou a sensação de que o problema era você.
           </p>
           <div className="mt-6 border-t border-border/40 pt-4 font-serif text-xs italic text-sage/80">
@@ -70,7 +71,7 @@ export function ParaQuem() {
 export function ProblemaReal() {
   return (
     <Section id="problema" kicker="O problema real" accent="ocre">
-      <h2 className="title-section max-w-[26ch]">
+      <h2 className="title-section">
         Quase nenhum método falha por falta de conteúdo. Falha por falta de estrutura.
       </h2>
       
@@ -81,7 +82,7 @@ export function ProblemaReal() {
           <p className="prose-mapa mt-3 text-[0.94rem]">
             Um curso self-paced entrega 200 aulas e nenhuma decisão: o que estudar hoje, o que fazer
             quando você perder três dias seguidos, como saber se avançou. A responsabilidade de
-            montar o sistema fica com quem menos tem como montá-lo — você, que ainda não conhece o
+            montar o sistema fica com quem menos tem como montá-lo - você, que ainda não conhece o
             terreno.
           </p>
         </div>
@@ -101,8 +102,8 @@ export function ProblemaReal() {
           <span className="font-serif text-2xl font-bold text-ocre/70">03</span>
           <h3 className="mt-2 font-serif text-lg font-bold text-creme">Promessas & Gamificação</h3>
           <p className="prose-mapa mt-3 text-[0.94rem]">
-            Some a isso a promessa de fluência em prazo fixo — que ignora ponto de partida, rotina e
-            objetivo — e a gamificação que troca aprendizado por sequência de dias. Ofuscante por uma
+            Some a isso a promessa de fluência em prazo fixo - que ignora ponto de partida, rotina e
+            objetivo - e a gamificação que troca aprendizado por sequência de dias. Ofuscante por uma
             semana, irrelevante no segundo mês. Quando a motivação baixa, e ela sempre baixa, não
             sobra nada segurando você.
           </p>
@@ -110,8 +111,8 @@ export function ProblemaReal() {
       </div>
 
       {/* Destaque Editorial Quote */}
-      <div className="mt-10 rounded-xl border border-ocre/30 bg-ocre/5 p-6 sm:p-8 backdrop-blur-sm">
-        <blockquote className="font-serif text-lg italic text-creme/90 sm:text-xl">
+      <div className="mt-10 rounded-xl bg-terracota p-6 sm:p-8 shadow-xl text-creme">
+        <blockquote className="font-serif text-lg italic sm:text-xl">
           "O idioma nunca encosta na sua vida real, e o que não encosta na vida não gruda na memória."
         </blockquote>
       </div>
@@ -160,30 +161,40 @@ export function ProvaViva() {
         </figure>
 
         <div>
-          <h2 className="title-section max-w-[24ch]">
+          <h2 className="title-section text-creme">
             Se você já desistiu de um idioma, saiba: <em className="text-ocre font-serif italic">eu também.</em>
           </h2>
-          <div className="prose-mapa mt-7 space-y-6 text-[1.02rem]">
-            <p className="rounded-lg border-l-2 border-ocre/50 bg-navy-card/40 p-4 pl-5">
-              Aprendi inglês sozinho na adolescência, movido só por curiosidade — eu queria
-              entender as letras das bandas que ouvia e as piadas que a legenda não traduzia.
-              Funcionou, mas levei mais de cinco anos para perceber que aquilo tinha virado
-              fluência.
-            </p>
-            <p>
-              Anos depois, já adulto, tentei outro idioma do jeito convencional: comprei o curso,
-              comecei animado e abandonei no meio do caminho. Passei muito tempo achando que o
-              problema era eu, até entender que me faltava um sistema que respeitasse como meu
-              cérebro realmente aprende e que se adaptasse à minha rotina — não o contrário.
-            </p>
-            <p>
-              Hoje, enquanto estudo mandarim e francês (e engatinho no coreano e no catalão), me
-              dedico a investigar o processo de aprender idiomas. Não como linguista de formação,
-              mas como alguém que testa métodos na prática, lê a pesquisa acadêmica com seriedade e
-              organiza os padrões que observa. O que encontrei não foi uma fórmula. Foi um mapa.
-            </p>
-          </div>
+          <p className="lead mt-6 text-creme/90">
+            Eu aprendi inglês sozinho por prazer, mas levei tempo até a fluência. Depois abandonei
+            outro idioma porque o sistema não se adaptava a mim. Só saí do lugar quando entendi: não
+            existe método milagroso, sistema infalível nem nada do tipo. Aprender um idioma não
+            envolve dom, inspiração e nem mesmo perfeição - basta um método que caiba na sua vida e
+            na sua realidade.
+            <span className="mt-4 block text-ocre">
+              O resto do percurso, conto abaixo.
+            </span>
+          </p>
         </div>
+      </div>
+
+      <div className="prose-mapa mt-10 space-y-6 text-[1.02rem]">
+        <p>
+          O inglês chegou primeiro: na adolescência, sozinho, movido só por curiosidade - eu queria
+          entender as letras das bandas que ouvia e as piadas que a legenda não traduzia. Funcionou, mas
+          levei mais de cinco anos para perceber que aquilo tinha virado fluência.
+        </p>
+        <p>
+          Anos depois, já adulto, tentei outro idioma do jeito convencional: comprei o curso,
+          comecei animado e abandonei no meio do caminho. Passei muito tempo achando que o
+          problema era eu, até entender que me faltava um sistema que respeitasse como meu
+          cérebro realmente aprende e que se adaptasse à minha rotina - não o contrário.
+        </p>
+        <p>
+          Hoje, enquanto estudo mandarim e francês (e engatinho no coreano e no catalão), me
+          dedico a investigar o processo de aprender idiomas. Não como linguista de formação,
+          mas como alguém que testa métodos na prática, lê a pesquisa acadêmica com seriedade e
+          organiza os padrões que observa. O que encontrei não foi uma fórmula. Foi um mapa.
+        </p>
       </div>
     </Section>
   );
@@ -195,13 +206,13 @@ export function ComoFunciona() {
       t: "Rede de Segurança",
       c: "sage" as const,
       icon: ShieldCheck,
-      d: "A estrutura externa que sustenta o estudo justamente quando a vontade não aparece: o que fazer no dia ruim, como voltar depois de faltar, qual é o mínimo que ainda conta. Você não precisa querer todos os dias — precisa ter onde se segurar.",
+      d: "A estrutura externa que sustenta o estudo justamente quando a vontade não aparece: o que fazer no dia ruim, como voltar depois de faltar, qual é o mínimo que ainda conta. Você não precisa querer todos os dias - precisa ter onde se segurar.",
     },
     {
       t: "Ponte Pessoal",
       c: "ocre" as const,
       icon: Workflow,
-      d: "O idioma entra pela sua vida, não pelo índice de um livro. O vocabulário que você constrói primeiro é o do que você faz, do que você gosta e do que você quer dizer — porque é isso que sua memória aceita guardar.",
+      d: "O idioma entra pela sua vida, não pelo índice de um livro. O vocabulário que você constrói primeiro é o do que você faz, do que você gosta e do que você quer dizer - porque é isso que sua memória aceita guardar.",
     },
     {
       t: "Progresso sentido",
@@ -219,12 +230,12 @@ export function ComoFunciona() {
 
   return (
     <Section id="metodo" kicker="Como funciona o MAPA" accent="terracota">
-      <h2 className="title-section max-w-[26ch]">
+      <h2 className="title-section">
         Existe estrutura por trás. Não é intuição minha.
       </h2>
       <p className="prose-mapa mt-6 text-[1.05rem]">
         O método inteiro se desdobra dentro da mentoria, no seu caso específico. Mas três pilares
-        sustentam tudo o resto — e dá para explicar os três sem enrolação:
+        sustentam tudo o resto - e dá para explicar os três sem enrolação:
       </p>
 
       <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -254,11 +265,11 @@ export function ComoFunciona() {
 export function ComoEMentoria() {
   return (
     <Section id="mentoria" kicker="Como é a mentoria" accent="sage">
-      <h2 className="title-section max-w-[24ch]">Individual, e por isso imprevisível no começo.</h2>
+      <h2 className="title-section">Individual, e por isso imprevisível no começo.</h2>
       
       <div className="prose-mapa mt-7 space-y-5 text-[1.02rem]">
         <p>
-          Tudo parte do diagnóstico — a call de 30 minutos que a gente marca pelo WhatsApp. Antes de
+          Tudo parte do diagnóstico - a call de 30 minutos que a gente marca pelo WhatsApp. Antes de
           qualquer plano, eu preciso entender qual idioma você quer, de onde você está partindo,
           quanto tempo real você tem numa semana comum e o que você quer poder fazer no idioma daqui
           a algum tempo.
@@ -266,7 +277,7 @@ export function ComoEMentoria() {
         <p>
           A partir daí é acompanhamento próximo: encontros combinados de acordo com a sua rotina,
           conteúdo adaptado ao seu idioma e ao seu nível, ajustes conforme a vida muda. Eu fico por
-          perto entre os encontros — quando algo trava, você não precisa esperar duas semanas para
+          perto entre os encontros - quando algo trava, você não precisa esperar duas semanas para
           contar.
         </p>
       </div>
@@ -308,7 +319,7 @@ export function ComoEMentoria() {
         </p>
         <p className="prose-mapa mt-4 text-[0.98rem]">
           O investimento é definido individualmente depois do diagnóstico, considerando idioma,
-          ponto de partida e objetivo. Isso é combinado com você, não antes de eu te conhecer —
+          ponto de partida e objetivo. Isso é combinado com você, não antes de eu te conhecer -
           porque não é um produto padronizado.
         </p>
       </div>
@@ -319,7 +330,7 @@ export function ComoEMentoria() {
 const NAO_E = [
   "Não prometo fluência. Prometo processo e acompanhamento.",
   "Não trabalho com prazo fixo, porque ninguém honesto consegue prever o seu.",
-  "Motivação é clima, não combustível — não vendo picos de empolgação.",
+  "Motivação é clima, não combustível - não vendo picos de empolgação.",
   "Não é curso gravado genérico servido para todo mundo igual.",
   "Não é gamificação disfarçada de método.",
   "Não é conduzido por inteligência artificial. Sou eu, conversando com você.",
@@ -328,14 +339,20 @@ const NAO_E = [
 
 export function OQueNaoE() {
   return (
-    <Section id="nao-e" kicker="O que isso não é" accent="plum">
-      <h2 className="title-section max-w-[24ch]">Os inegociáveis, ditos antes de você perguntar.</h2>
+    <Section
+      id="nao-e"
+      kicker="O que isso não é"
+      accent="plum"
+      padX="px-7 sm:px-16"
+      className="rounded-3xl bg-creme text-navy"
+    >
+      <h2 className="title-section text-navy">Os inegociáveis, ditos antes de você perguntar.</h2>
       
       <div className="mt-9 grid gap-4 sm:grid-cols-2">
         {NAO_E.map((item, idx) => (
           <div
             key={item}
-            className="editorial-card flex items-start gap-4 rounded-xl p-5 transition-all hover:border-plum/50"
+            className="editorial-card flex items-start gap-4 rounded-xl border-navy/15 p-5 transition-all hover:border-plum/50"
           >
             <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-plum/20 text-plum font-serif font-bold text-sm">
               ✕
@@ -358,7 +375,7 @@ export function Diagnostico() {
             Call individual ao vivo
           </div>
 
-          <h2 className="title-section max-w-[24ch] text-creme">
+          <h2 className="title-section text-creme">
             Uma call de 30 minutos, marcada pelo WhatsApp. Sem compromisso.
           </h2>
 
@@ -369,8 +386,8 @@ export function Diagnostico() {
             </p>
             <p>
               Nessa call falamos sobre onde você está: o que já tentou, onde travou, quanto tempo você
-              tem numa semana comum, o que te fez querer esse idioma em primeiro lugar. Eu te digo com
-              franqueza o que vejo — inclusive se eu achar que a mentoria não é o que você precisa
+              tem numa semana comum, o que te fez querer esse idioma. Eu te digo com
+              franqueza o que vejo - inclusive se eu achar que a mentoria não é o que você precisa
               agora.
             </p>
             <p>
@@ -405,7 +422,7 @@ const FAQ = [
   },
   {
     q: "Funciona pra qualquer idioma?",
-    a: "Sim. O método nasceu de anos estudando múltiplos idiomas de verdade e a estrutura não depende de eu falar fluentemente o idioma que você escolheu — depende de como o cérebro adulto de fato aprende.",
+    a: "Sim. O método nasceu de anos estudando múltiplos idiomas de verdade e a estrutura não depende de eu falar fluentemente o idioma que você escolheu - depende de como o cérebro adulto aprende.",
   },
   {
     q: "É mentoria com inteligência artificial ou conteúdo gravado?",
@@ -422,9 +439,9 @@ export function Faq() {
 
   return (
     <Section id="faq" kicker="Perguntas" accent="ocre">
-      <h2 className="title-section max-w-[22ch]">O que costumam me perguntar</h2>
+      <h2 className="title-section">O que costumam me perguntar</h2>
       
-      <div className="mt-9 grid gap-4 max-w-[54ch]">
+      <div className="mt-9 grid gap-4">
         {FAQ.map((item, idx) => {
           const isOpen = openIndex === idx;
           return (
@@ -469,7 +486,7 @@ const NIVEIS = [
   {
     n: "02",
     t: "Compreensão em Contexto Controlado",
-    d: "A língua começa a ter utilidade prática — desde que o interlocutor colabore (fale devagar, de forma clara, com vocabulário simples). O aprendiz realiza transações previsíveis e consegue ler placas, menus e formulários.",
+    d: "A língua começa a ter utilidade prática - desde que o interlocutor colabore (fale devagar, de forma clara, com vocabulário simples). O aprendiz realiza transações previsíveis e consegue ler placas, menus e formulários.",
   },
   {
     n: "03",
@@ -489,12 +506,12 @@ const NIVEIS = [
   {
     n: "06",
     t: "Versatilidade Dialetal e Regional",
-    d: "O idioma deixa de ser monolítico. O aprendiz entende sotaques fortes, variantes regionais e gírias locais sem pedir para repetir — seus ouvidos abraçam o ecossistema completo, mesmo que ele não fale todos os dialetos.",
+    d: "O idioma deixa de ser monolítico. O aprendiz entende sotaques fortes, variantes regionais e gírias locais sem pedir para repetir - seus ouvidos abraçam o ecossistema completo, mesmo que ele não fale todos os dialetos.",
   },
   {
     n: "07",
     t: "Integração e Pertencimento",
-    d: "O topo. Ninguém mais lembra que o aprendiz é estrangeiro — e isso tem a ver com pertencimento, não perfeição. Suas piadas funcionam pelo conteúdo e o sotaque, se ainda existe, tornou-se irrelevante.",
+    d: "O topo. Ninguém mais lembra que o aprendiz é estrangeiro - e isso tem a ver com pertencimento, não perfeição. Suas piadas funcionam pelo conteúdo e o sotaque, se ainda existe, tornou-se irrelevante.",
   },
 ];
 
@@ -518,28 +535,46 @@ export function BonusNiveis() {
 
   return (
     <Section id="bonus" kicker="Já que você chegou até aqui" accent="sage">
-      <h2 className="title-section max-w-[24ch]">
-        Um presente pra você que chegou até aqui.
-      </h2>
-      <p className="lead mt-5 max-w-[36ch] text-creme/85">
-        Não saber em que nível você está é parte do motivo de você não avançar e pra
-        te ajudar nisso, trazemos aqui um pequeno guia abordando os Sete Níveis de
-        Proficiência de qualquer idioma.
-      </p>
-      
-      <div className="prose-mapa mt-6 space-y-4 text-[1.02rem]">
-        <p>
-          Não é um PDF de duas páginas. É um guia extenso, em que a fluência aparece dividida em
-          sete níveis distintos, cada um com respaldo em pesquisa científica — porque cada nível
-          corresponde a um estágio cognitivo, neurológico e sociocultural que se repete em qualquer
-          idioma e em qualquer pessoa.
-        </p>
-        <p>
-          Nele você entende o que muda de fato dentro da sua cabeça em cada estágio, o que costuma
-          travar a passagem para o seguinte e por que tanta gente acha que estagnou quando na
-          verdade está no meio de uma transição. Serve para você localizar onde parou de verdade —
-          mesmo que a gente nunca converse.
-        </p>
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-start lg:gap-14">
+        <div>
+          <h2 className="title-section">
+            Um presente pra você que chegou até aqui.
+          </h2>
+          <p className="lead mt-5 text-creme/85">
+            Não saber em que nível você está é parte do motivo de você não avançar e pra
+            te ajudar nisso, trazemos aqui um pequeno guia abordando os Sete Níveis de
+            Proficiência de qualquer idioma.
+          </p>
+
+          <div className="prose-mapa mt-6 space-y-4 text-[1.02rem]">
+            <p>
+              Não é um PDF de duas páginas. É um guia extenso, em que a fluência aparece dividida em
+              sete níveis distintos, cada um com respaldo em pesquisa científica - porque cada nível
+              corresponde a um estágio cognitivo, neurológico e sociocultural que se repete em qualquer
+              idioma e em qualquer pessoa.
+            </p>
+            <p>
+              Nele você entende o que muda dentro da sua cabeça em cada estágio, o que costuma
+              travar a passagem para o seguinte e por que tanta gente acha que estagnou quando na
+              verdade está no meio de uma transição. Serve para você localizar onde parou de verdade -
+              mesmo que a gente nunca converse.
+            </p>
+          </div>
+        </div>
+
+        <figure className="mx-auto w-full max-w-sm">
+          <div className="overflow-hidden rounded-2xl border border-sage/25 bg-navy-card/70 p-2 shadow-2xl">
+            <img
+              src={mockupGuia}
+              alt="Mockup do guia dos Sete Níveis de Proficiência"
+              loading="lazy"
+              className="h-auto w-full rounded-xl"
+            />
+          </div>
+          <figcaption className="kicker mt-4 text-[0.68rem] leading-relaxed text-sage/90">
+            sete níveis num só material · para localizar onde você parou
+          </figcaption>
+        </figure>
       </div>
 
       {/* 7 Níveis Interactive Component */}
@@ -573,7 +608,7 @@ export function BonusNiveis() {
 
         {/* Selected Level Display */}
         {(() => {
-          const current = NIVEIS[activeNivel] ?? NIVEIS[0];
+          const current = NIVEIS[activeNivel] ?? NIVEIS[0]!;
           return (
             <div className="mt-6 rounded-xl border border-terracota/20 bg-navy-deep/90 p-5 sm:p-6 transition-all">
               <div className="flex items-center gap-3">
@@ -590,72 +625,52 @@ export function BonusNiveis() {
             </div>
           );
         })()}
-
-        {/* Full List view for completeness */}
-        <div className="mt-8 border-t border-border/40 pt-6">
-          <p className="text-xs font-semibold uppercase tracking-wider text-sage/80 mb-4">Visão geral da estrutura:</p>
-          <ol className="divide-y divide-border/40">
-            {NIVEIS.map((nivel, idx) => (
-              <li
-                key={nivel.n}
-                onClick={() => setActiveNivel(idx)}
-                className={`flex cursor-pointer gap-4 py-3.5 transition-colors ${
-                  activeNivel === idx ? "text-terracota" : "hover:text-creme"
-                }`}
-              >
-                <span className="font-serif text-sm font-bold text-terracota tabular-nums">
-                  {nivel.n}
-                </span>
-                <span className="min-w-0">
-                  <span className="block font-sans text-[0.95rem] font-semibold text-creme">
-                    {nivel.t}
-                  </span>
-                  <span className="prose-mapa block text-[0.88rem] leading-relaxed text-creme/70">
-                    {nivel.d}
-                  </span>
-                </span>
-              </li>
-            ))}
-          </ol>
-        </div>
       </div>
 
-      {/* Formulário visualmente pronto */}
-      <form className="mt-10 max-w-[48ch]" onSubmit={handleSubmit}>
-        <label htmlFor="email-guia" className="kicker block text-sage">
-          receber o guia completo por e-mail
-        </label>
-        <div className="mt-3 flex flex-col gap-3 sm:flex-row">
-          <input
-            id="email-guia"
-            type="email"
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            placeholder="seu@email.com"
-            className="w-full rounded-md border border-input bg-navy-deep px-4 py-3.5 font-sans text-base text-creme placeholder:text-creme/35 focus:border-sage focus:outline-none focus:ring-2 focus:ring-sage/40 transition-all"
-          />
-          <button
-            type="submit"
-            disabled={submitting}
-            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-sage px-6 py-3.5 font-sans text-base font-semibold text-accent-foreground transition-all hover:bg-sage/90 active:scale-[0.98] disabled:opacity-70 cursor-pointer shadow-md"
-          >
-            {submitting ? (
-              <span>Enviando...</span>
-            ) : (
-              <>
-                <span>Quero o guia</span>
-                <Send className="h-4 w-4" />
-              </>
-            )}
-          </button>
-        </div>
-        <p className="mt-3 font-sans text-[0.82rem] text-creme/45">
-          Só o guia e, de vez em quando, algo que eu ache que vale seu tempo. Nada de disparo
-          diário.
+      {/* Formulário */}
+      <div className="mt-12 max-w-[48ch]">
+        <p className="prose-mapa text-[1.02rem] leading-relaxed text-creme/85">
+          É um guia para usar, não para acumular: dá para ler numa pausa do dia ou no trajeto
+          para o trabalho e, antes de terminar, você já sai com clareza do seu próximo passo
+          no idioma.
         </p>
-      </form>
+
+        <form className="mt-6" onSubmit={handleSubmit}>
+          <label htmlFor="email-guia" className="kicker block text-sage">
+            receber o guia completo por e-mail
+          </label>
+          <div className="mt-3 flex flex-col gap-3 sm:flex-row">
+            <input
+              id="email-guia"
+              type="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              placeholder="seu@email.com"
+              className="w-full rounded-md border border-input bg-navy-deep px-4 py-3.5 font-sans text-base text-creme placeholder:text-creme/35 focus:border-sage focus:outline-none focus:ring-2 focus:ring-sage/40 transition-all"
+            />
+            <button
+              type="submit"
+              disabled={submitting}
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-sage px-6 py-3.5 font-sans text-base font-semibold text-accent-foreground transition-all hover:bg-sage/90 active:scale-[0.98] disabled:opacity-70 cursor-pointer shadow-md"
+            >
+              {submitting ? (
+                <span>Enviando...</span>
+              ) : (
+                <>
+                  <span>Quero o guia</span>
+                  <Send className="h-4 w-4" />
+                </>
+              )}
+            </button>
+          </div>
+          <p className="mt-3 font-sans text-[0.82rem] text-creme/45">
+            Só o guia e, de vez em quando, algo que eu ache que vale seu tempo. Nada de disparo
+            diário.
+          </p>
+        </form>
+      </div>
     </Section>
   );
 }

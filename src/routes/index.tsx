@@ -146,11 +146,11 @@ function Index() {
           />
 
           {/* Hero Section */}
-          <section className="relative py-16 sm:py-24 lg:py-28">
-            <RouteNode />
+          <section className="relative py-12 sm:py-16 lg:py-20">
+            <RouteNode className="top-14 sm:top-[4.5rem] lg:top-[5.5rem]" />
             
             <div className="pl-6 sm:pl-14">
-              <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+              <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
                 {/* Text column */}
                 <div className="lg:col-span-7">
                   <p
@@ -185,7 +185,7 @@ function Index() {
                     style={{ animationDelay: "1.05s" }}
                   >
                     Nenhuma data de fluência prometida, nenhum prazo genérico, nenhuma fórmula. Um
-                    diagnóstico primeiro — uma call de 30 minutos, que a gente marca pelo WhatsApp — e um
+                    diagnóstico primeiro - uma call de 30 minutos, que a gente marca pelo WhatsApp - e um
                     caminho depois: o seu.
                   </p>
 
@@ -203,14 +203,14 @@ function Index() {
                 </div>
 
                 {/* Visual Feature Card (Map Milestone Preview) */}
-                <div className="lg:col-span-5 hero-rise" style={{ animationDelay: "1.35s" }}>
+                <div className="lg:col-span-5 hero-rise lg:mt-12" style={{ animationDelay: "1.35s" }}>
                   <div className="editorial-card relative overflow-hidden rounded-2xl border border-terracota/25 bg-gradient-to-b from-navy-card via-navy-raised to-navy-deep p-6 shadow-2xl">
-                    <div className="flex items-center justify-between border-b border-border/40 pb-4">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/40 pb-4">
                       <div className="flex items-center gap-2">
-                        <Compass className="h-5 w-5 text-terracota" />
-                        <span className="font-serif text-sm font-bold text-creme">A Jornada no MAPA</span>
+                        <Compass className="h-5 w-5 shrink-0 text-terracota" />
+                        <span className="whitespace-nowrap font-serif text-sm font-bold text-creme">A Jornada no MAPA</span>
                       </div>
-                      <span className="flex items-center gap-1.5 rounded-full bg-sage/20 px-2.5 py-0.5 text-[0.7rem] font-semibold text-sage">
+                      <span className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-sage/20 px-2.5 py-0.5 text-[0.7rem] font-semibold text-sage">
                         <span className="h-1.5 w-1.5 rounded-full bg-sage animate-ping" />
                         Mentoria Individual
                       </span>
