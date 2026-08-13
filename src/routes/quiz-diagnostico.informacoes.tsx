@@ -1,7 +1,7 @@
 "use client";
 
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { Loader2, Send } from "lucide-react";
+import { Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
 
 import { useQuiz } from "@/components/quiz/quiz-context";
@@ -28,12 +28,10 @@ function QuizInfo() {
   const [language, setLanguage] = useState("");
   const [otherLanguage, setOtherLanguage] = useState("");
   const [errors, setErrors] = useState<{ name?: string; email?: string; language?: string }>({});
-  const [submitting, setSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState("");
 
   const showOther = language === OTHER_LANGUAGE;
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const nextErrors: typeof errors = {};
     const finalLanguage = showOther ? otherLanguage.trim() : language;
@@ -50,32 +48,9 @@ function QuizInfo() {
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) return;
 
-    setSubmitting(true);
-    setSubmitError("");
-    try {
-      const res = await fetch("/.netlify/functions/submit-quiz-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: name.trim(),
-          email: email.trim(),
-          language: finalLanguage,
-        }),
-      });
-      const data = await res.json().catch(() => null);
-      if (!res.ok || data?.message !== "sucesso") {
-        setSubmitError(data?.error || "Não consegui enviar agora. Tenta de novo em instantes.");
-        return;
-      }
-
-      setInfo({ name: name.trim(), email: email.trim(), language: finalLanguage });
-      advanceTo(2);
-      navigate({ to: "/quiz-diagnostico/bloco-1" });
-    } catch {
-      setSubmitError("Erro de conexão. Tenta de novo em instantes.");
-    } finally {
-      setSubmitting(false);
-    }
+    setInfo({ name: name.trim(), email: email.trim(), language: finalLanguage });
+    advanceTo(2);
+    navigate({ to: "/quiz-diagnostico/bloco-1" });
   };
 
   const inputClass =
@@ -180,35 +155,15 @@ function QuizInfo() {
           )}
         </div>
 
-        {submitError && (
-          <p
-            role="alert"
-            className="rounded-lg border border-terracota/40 bg-terracota/10 px-4 py-3 font-sans text-sm font-medium text-terracota"
-          >
-            {submitError}
-          </p>
-        )}
-
         <button
           type="submit"
-          disabled={submitting}
-          className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-terracota px-6 py-4 font-sans text-base font-semibold text-creme shadow-md shadow-terracota/20 transition-all hover:bg-terracota/90 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+          className="group inline-flex w-full items-center justify-center gap-2 rounded-md bg-terracota px-6 py-4 font-sans text-base font-semibold text-creme shadow-md shadow-terracota/20 transition-all hover:bg-terracota/90 active:scale-[0.98] sm:w-auto"
         >
-          {submitting ? (
-            <>
-              <Loader2 className="h-5 w-5 animate-spin" />
-              Enviando...
-            </>
-          ) : (
-            <>
-              Começar o quiz
-              <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </>
-          )}
+          Começar o quiz
+          <Send className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </button>
         <p className="font-sans text-[0.82rem] text-creme/45">
-          Seus dados vão direto pro nosso formulário - usamos só pra personalizar sua jornada no
-          MAPA.
+          Seus dados ficam só no seu navegador - usamos pra personalizar sua jornada no MAPA.
         </p>
       </form>
     </div>
