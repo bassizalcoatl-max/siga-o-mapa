@@ -1,5 +1,10 @@
+"use client";
+
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
+
+import { useQuiz } from "@/components/quiz/quiz-context";
 
 export const Route = createFileRoute("/quiz-diagnostico/")({
   head: () => ({
@@ -12,6 +17,15 @@ export const Route = createFileRoute("/quiz-diagnostico/")({
 });
 
 function QuizStart() {
+  const { reset } = useQuiz();
+  const didReset = useRef(false);
+
+  useEffect(() => {
+    if (didReset.current) return;
+    didReset.current = true;
+    reset();
+  }, [reset]);
+
   return (
     <div className="editorial-card rounded-2xl border border-sage/25 bg-navy-card/60 p-6 sm:p-10">
       <p className="kicker text-sage">Antes de começar</p>
