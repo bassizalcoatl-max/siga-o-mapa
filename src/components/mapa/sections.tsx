@@ -572,7 +572,7 @@ export function BonusNiveis() {
       }
       setStatus({
         type: "success",
-        message: `Guia tá a caminho! Confere sua caixa de entrada (${email}).`,
+        message: `Seu guia gratuito já está a caminho do e-mail (${email})! Confira tanto sua caixa de entrada quanto a caixa de spam.`,
       });
       setEmail("");
     } catch {
