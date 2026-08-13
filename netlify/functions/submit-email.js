@@ -2,7 +2,7 @@ import { Resend } from "resend";
 
 const SITE_URL = process.env.SITE_URL || "https://sigaomapa.com.br";
 const GUIDE_URL = `${SITE_URL}/guia-7-niveis`;
-const FROM = process.env.RESEND_FROM || "Guia <no-reply@sigaomapa.com.br>";
+const FROM = process.env.RESEND_FROM || "Guia <guia@sigaomapa.com.br>";
 
 export const handler = async (event) => {
   if (event.httpMethod !== "POST") {
