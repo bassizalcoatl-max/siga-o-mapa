@@ -1,7 +1,7 @@
 "use client";
 
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { Compass, MessageCircle, RotateCcw } from "lucide-react";
+import { MessageCircle, RotateCcw } from "lucide-react";
 
 import { RequireStep } from "@/components/quiz/quiz-guard";
 import { useQuiz } from "@/components/quiz/quiz-context";
@@ -37,17 +37,12 @@ function QuizResult() {
       <div className="editorial-card rounded-2xl border border-sage/25 bg-navy-card/60 p-6 sm:p-10">
         <p className="kicker text-sage">Seu resultado</p>
 
-        <div className="mt-6 flex items-start gap-4">
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-terracota/15 text-terracota">
-            <Compass className="h-6 w-6" />
-          </span>
-          <div>
-            <h1 className="title-section">Nível {level.name}</h1>
-            <p className="mt-2 font-sans text-sm text-creme/55">
-              {state.name ? `${state.name}, e` : "Este"} é o seu retrato de agora - não uma nota,
-              não um prazo.
-            </p>
-          </div>
+        <div className="mt-6">
+          <h1 className="title-section">Nível {level.name}</h1>
+          <p className="mt-2 font-sans text-sm text-creme/55">
+            {state.name ? `${state.name}, esse é` : "Este é"} o seu retrato de agora - não uma nota,
+            não um prazo.
+          </p>
         </div>
 
         <div className="mt-9 space-y-7">
@@ -69,10 +64,11 @@ function QuizResult() {
 
         <div className="mt-10 rounded-xl border border-terracota/30 bg-gradient-to-br from-navy-card via-navy-raised to-navy-deep p-6 sm:p-8">
           <p className="title-sub text-creme">E se esse retrato for só o começo?</p>
+          <p className="prose-mapa mt-3 text-[0.98rem] leading-relaxed">{level.cta}</p>
           <p className="prose-mapa mt-3 text-[0.98rem] leading-relaxed">
-            {level.cta} Uma mentoria começa com um diagnóstico de 30 minutos, sem compromisso - pra
-            a gente desenhar o caminho a partir de onde você está, não de onde todo mundo acha que
-            você deveria estar.
+            Uma mentoria começa com um diagnóstico de 30 minutos, sem compromisso - para desenharmos
+            juntos o caminho a partir de onde você está, e não de onde todos acham que você deveria
+            estar.
           </p>
           <a
             href={waHref}

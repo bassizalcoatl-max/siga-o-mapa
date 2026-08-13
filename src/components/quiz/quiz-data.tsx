@@ -528,12 +528,12 @@ export const RESULT_LEVELS: ResultLevel[] = [
     name: "1 - Repertório de Roteiros Sociais",
     title: "Repertório de Roteiros Sociais",
     ondeVoceEsta:
-      "você já tem um repertório de frases prontas - cumprimentos, agradecimentos, pedidos simples - e reconhece palavras cognatas quando aparecem. Fora do roteiro esperado, porém, a compreensão ainda cai a zero. É o começo de tudo, e é uma base real, não uma ilusão de progresso.",
+      "Você já tem um repertório de frases prontas - cumprimentos, agradecimentos, pedidos simples - e reconhece palavras cognatas quando aparecem. Fora do roteiro esperado, porém, a compreensão ainda cai a zero. É o começo de tudo, e é uma base real, não uma ilusão de progresso.",
     proximosPassos:
-      'sair do modo "frase decorada" e começar a processar a língua de forma mais ativa - entender respostas que fogem do previsto, construir um vocabulário funcional para o seu dia a dia real, não só para situações de manual de viagem.',
+      'Sair do modo "frase decorada" e começar a processar a língua de forma mais ativa - entender respostas que fogem do previsto, construir um vocabulário funcional para o seu dia a dia real, não só para situações de manual de viagem.',
     comoMapaAjuda: (
       <>
-        este é o momento do <strong>Plano de Piso</strong> - um compromisso mínimo e diário,
+        Este é o momento do <strong>Plano de Piso</strong> - um compromisso mínimo e diário,
         sustentável mesmo antes de a motivação estar 100% presente - combinado com a{" "}
         <strong>Curadoria de Criadores</strong>, que te expõe a conteúdo real do idioma desde já,
         mesmo sem entender tudo. A mentoria estrutura essas duas peças desde a primeira semana.
@@ -547,12 +547,12 @@ export const RESULT_LEVELS: ResultLevel[] = [
     name: "2 - Compreensão em Contexto Controlado",
     title: "Compreensão em Contexto Controlado",
     ondeVoceEsta:
-      "a língua já tem utilidade prática - desde que o interlocutor colabore, falando devagar e com vocabulário simples. Você resolve transações previsíveis e lê informação estática (placas, cardápios, formulários) sem problema.",
+      "A língua já tem utilidade prática - desde que o interlocutor colabore, falando devagar e com vocabulário simples. Você resolve transações previsíveis e lê informação estática (placas, cardápios, formulários) sem problema.",
     proximosPassos:
-      'tolerar mais ambiguidade e depender cada vez menos de alguém "ajudar" falando devagar. O objetivo aqui não é decorar mais frases, e sim treinar o ouvido para lidar com um pouco mais de imprevisibilidade a cada semana.',
+      'Tolerar mais ambiguidade e depender cada vez menos de alguém "ajudar" falando devagar. O objetivo aqui não é decorar mais frases, e sim treinar o ouvido para lidar com um pouco mais de imprevisibilidade a cada semana.',
     comoMapaAjuda: (
       <>
-        o <strong>Plano de Piso</strong> continua sendo a espinha dorsal, mas a{" "}
+        O <strong>Plano de Piso</strong> continua sendo a espinha dorsal, mas a{" "}
         <strong>Curadoria de Criadores</strong> já começa a incluir conteúdo com apoio visual e cada
         vez menos simplificado - preparando o terreno perceptivo para o que vem a seguir.
       </>
@@ -565,18 +565,18 @@ export const RESULT_LEVELS: ResultLevel[] = [
     name: "3 - Muralha da Dicção Natural",
     title: "Muralha da Dicção Natural",
     ondeVoceEsta:
-      "você já fala razoavelmente - conta o seu dia, faz planos, escreve mensagens -, mas os ouvidos ainda falham diante da fala nativa em velocidade real. Isto não é um sinal de que você está fazendo algo errado: é o ponto de maior carga cognitiva de todo o processo, documentado como o estágio em que a maioria das pessoas desiste.",
+      "Você já fala razoavelmente - conta o seu dia, faz planos, escreve mensagens -, mas os ouvidos ainda falham diante da fala nativa em velocidade real. Isto não é um sinal de que você está fazendo algo errado: é o ponto de maior carga cognitiva de todo o processo, documentado como o estágio em que a maioria das pessoas desiste.",
     proximosPassos:
-      "atravessar esse platô sem abandonar o processo. Não existe atalho para isso - existe exposição sustentada às reduções fonéticas reais do idioma, e uma estrutura que te segure firme enquanto o ouvido se reorganiza.",
+      "Atravessar esse platô sem abandonar o processo. Não existe atalho para isso - existe exposição sustentada às reduções fonéticas reais do idioma, e uma estrutura que te segure firme enquanto o ouvido se reorganiza.",
     comoMapaAjuda: (
       <>
-        este é exatamente o momento em que a <strong>Rede de Segurança</strong> - estrutura externa
+        Este é exatamente o momento em que a <strong>Rede de Segurança</strong> - estrutura externa
         que sustenta o aprendizado quando a motivação naturalmente oscila - e o protocolo{" "}
         <strong>Hipótese → Investigação → Validação</strong> entram em ação, dando um método
         concreto para tolerar o que ainda não se entende, em vez de reagir ao platô com desistência.
       </>
     ),
-    cta: "Quer ajuda pra escalar essa muralha? Chama no WhatsApp pra marcarmos um diagnóstico de 30 minutos.",
+    cta: "Quer ajuda pra escalar essa muralha? Chama no WhatsApp e vamos estruturar essa travessia juntos.",
   },
   {
     min: 43,
@@ -584,12 +584,12 @@ export const RESULT_LEVELS: ResultLevel[] = [
     name: "4 - Autonomia Cognitiva e Improviso",
     title: "Autonomia Cognitiva e Improviso",
     ondeVoceEsta:
-      "você já parou de traduzir mentalmente. Não ensaia mais o que vai dizer, consegue parafrasear quando falta uma palavra e participa de conversas em grupo sem passividade. Ainda há erros e algum sotaque, mas o filtro da língua materna já não trava sua fala.",
+      "Você já parou de traduzir mentalmente. Não ensaia mais o que vai dizer, consegue parafrasear quando falta uma palavra e participa de conversas em grupo sem passividade. Ainda há erros e algum sotaque, mas o filtro da língua materna já não trava sua fala.",
     proximosPassos:
-      "ganhar consistência - reduzir a perda em tópicos abstratos, ampliar o vocabulário ativo para que a paráfrase seja cada vez mais rara, e não mais necessária.",
+      "Ganhar consistência - reduzir a perda em tópicos abstratos, ampliar o vocabulário ativo para que a paráfrase seja cada vez mais rara, e não mais necessária.",
     comoMapaAjuda: (
       <>
-        você já vive, na prática, o que chamamos de <strong>Compressão</strong> - o momento em que
+        Você já vive, na prática, o que chamamos de <strong>Compressão</strong> - o momento em que
         peças soltas se encaixaram e você passou a processar a língua diretamente. A técnica de{" "}
         <strong>tentativa-lacuna-busca</strong> é a forma de tornar esse mecanismo ainda mais
         eficiente, transformando cada lacuna de vocabulário em uma busca cirúrgica, não numa trava.
@@ -603,12 +603,12 @@ export const RESULT_LEVELS: ResultLevel[] = [
     name: "5 - Ancoragem Permanente",
     title: "Ancoragem Permanente",
     ondeVoceEsta:
-      'a língua está fixada. Você consome mídia nativa sem esforço perceptível, pensa automaticamente no idioma às vezes, e os nativos já pararam de "ajudar" - te tratam como um igual funcional. Mesmo uma pausa longa sem prática não apagaria isso.',
+      'A língua está fixada. Você consome mídia nativa sem esforço perceptível, pensa automaticamente no idioma às vezes, e os nativos já pararam de "ajudar" - te tratam como um igual funcional. Mesmo uma pausa longa sem prática não apagaria isso.',
     proximosPassos:
-      "a partir daqui, o desafio deixa de ser sobre entender e passa a ser sobre amplitude - abraçar a diversidade de sotaques, variantes regionais e registros que existem dentro do idioma que você já domina.",
+      "A partir daqui, o desafio deixa de ser sobre entender e passa a ser sobre amplitude - abraçar a diversidade de sotaques, variantes regionais e registros que existem dentro do idioma que você já domina.",
     comoMapaAjuda: (
       <>
-        a <strong>Ponte Pessoal</strong> já não precisa mais ser cultivada de forma deliberada - a
+        A <strong>Ponte Pessoal</strong> já não precisa mais ser cultivada de forma deliberada - a
         língua deixou de ser objeto de estudo e virou meio de vida. A partir daqui, a mentoria foca
         em ampliar a <strong>Curadoria de Criadores</strong> para fontes de regiões e registros
         diferentes.
@@ -622,12 +622,12 @@ export const RESULT_LEVELS: ResultLevel[] = [
     name: "6 - Versatilidade Dialetal e Regional",
     title: "Versatilidade Dialetal e Regional",
     ondeVoceEsta:
-      "poucas pessoas chegam até aqui. Sotaques fortes, variantes regionais e gírias locais deixaram de ser um obstáculo - o idioma não é mais monolítico para você. Não significa que você fale todos os dialetos que existem, mas seus ouvidos já estão treinados para o ecossistema completo da língua.",
+      "Poucas pessoas chegam até aqui. Sotaques fortes, variantes regionais e gírias locais deixaram de ser um obstáculo - o idioma não é mais monolítico para você. Não significa que você fale todos os dialetos que existem, mas seus ouvidos já estão treinados para o ecossistema completo da língua.",
     proximosPassos:
-      "o que falta não é mais estrutura linguística - é imersão cultural cada vez mais profunda. É a diferença entre entender uma piada e senti-la; entre reconhecer uma referência e ela já fazer parte do seu próprio repertório.",
+      "O que falta não é mais estrutura linguística - é imersão cultural cada vez mais profunda. É a diferença entre entender uma piada e senti-la; entre reconhecer uma referência e ela já fazer parte do seu próprio repertório.",
     comoMapaAjuda: (
       <>
-        neste estágio, o papel da mentoria muda de natureza - deixa de ensinar mecanismo e passa a{" "}
+        Neste estágio, o papel da mentoria muda de natureza - deixa de ensinar mecanismo e passa a{" "}
         <strong>curar experiência</strong>: direcionar exposição a fontes cada vez mais específicas
         e culturalmente densas, do tipo que só faz sentido buscar quando a base técnica já não é
         mais o gargalo.
@@ -641,12 +641,12 @@ export const RESULT_LEVELS: ResultLevel[] = [
     name: "7 - Integração e Pertencimento",
     title: "Integração e Pertencimento",
     ondeVoceEsta:
-      "o topo da montanha. Não se trata mais de gramática correta - trata-se de pertencimento. As pessoas esquecem que você é estrangeiro. Suas piadas funcionam pelo conteúdo, não pela execução. Ninguém pergunta de onde você é com base na sua fala. Chegar até aqui é raro, e se você está lendo este resultado, está entre uma fração muito pequena de aprendizes.",
+      "O topo da montanha. Não se trata mais de gramática correta - trata-se de pertencimento. As pessoas esquecem que você é estrangeiro. Suas piadas funcionam pelo conteúdo, não pela execução. Ninguém pergunta de onde você é com base na sua fala. Chegar até aqui é raro, e se você está lendo este resultado, está entre uma fração muito pequena de aprendizes.",
     proximosPassos:
-      'dentro deste idioma, não há um "próximo nível" - o que existe é manutenção natural, que já acontece sozinha, porque a língua virou parte de quem você é. Se existe uma fronteira daqui pra frente, ela normalmente não está mais dentro deste idioma: está em repetir esse processo, com tudo o que você já aprendeu sobre si mesmo como aprendiz, em um idioma novo.',
+      'Dentro deste idioma, não há um "próximo nível" - o que existe é manutenção natural, que já acontece sozinha, porque a língua virou parte de quem você é. Se existe uma fronteira daqui pra frente, ela normalmente não está mais dentro deste idioma: está em repetir esse processo, com tudo o que você já aprendeu sobre si mesmo como aprendiz, em um idioma novo.',
     comoMapaAjuda: (
       <>
-        aqui a <strong>Ponte Pessoal</strong> está em plenitude - não é mais uma técnica, é a sua
+        Aqui a <strong>Ponte Pessoal</strong> está em plenitude - não é mais uma técnica, é a sua
         relação vivida com a língua. Se o interesse for começar um novo idioma do zero, a mentoria
         parte de um lugar muito mais raro: você já sabe, na prática, como é chegar até aqui e pode
         fazê-lo novamente com poucas adaptações no caminho.
