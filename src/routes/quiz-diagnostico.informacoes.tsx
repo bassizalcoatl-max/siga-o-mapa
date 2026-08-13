@@ -53,30 +53,26 @@ function QuizInfo() {
     setSubmitting(true);
     setSubmitError("");
     try {
-      const body = new URLSearchParams({
-        "form-name": "quiz-lead",
-        "bot-field": "",
-        name: name.trim(),
-        email: email.trim(),
-        idioma: finalLanguage,
-      });
-
-      const res = await fetch("/", {
+      const res = await fetch("/.netlify/functions/submit-quiz-lead", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          Accept: "application/json",
-        },
-        body: body.toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          language: finalLanguage,
+        }),
       });
-
-      if (!res.ok) throw new Error("falha no envio");
+      const data = await res.json().catch(() => null);
+      if (!res.ok || data?.message !== "sucesso") {
+        setSubmitError(data?.error || "Não consegui enviar agora. Tenta de novo em instantes.");
+        return;
+      }
 
       setInfo({ name: name.trim(), email: email.trim(), language: finalLanguage });
       advanceTo(2);
       navigate({ to: "/quiz-diagnostico/bloco-1" });
     } catch {
-      setSubmitError("Não consegui enviar agora. Tenta de novo em instantes.");
+      setSubmitError("Erro de conexão. Tenta de novo em instantes.");
     } finally {
       setSubmitting(false);
     }
@@ -94,21 +90,7 @@ function QuizInfo() {
         resultado no seu contexto. Nada de spam depois disso.
       </p>
 
-      <form
-        name="quiz-lead"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        onSubmit={handleSubmit}
-        noValidate
-        className="mt-9 space-y-6"
-      >
-        <input type="hidden" name="form-name" value="quiz-lead" />
-        <p className="hidden" aria-hidden="true">
-          <label>
-            Não preencha este campo <input name="bot-field" tabIndex={-1} autoComplete="off" />
-          </label>
-        </p>
-
+      <form onSubmit={handleSubmit} noValidate className="mt-9 space-y-6">
         <div>
           <label htmlFor="quiz-nome" className="kicker block text-sage">
             Nome
