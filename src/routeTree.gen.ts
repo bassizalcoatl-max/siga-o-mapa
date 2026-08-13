@@ -11,6 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as Guia7NiveisRouteImport } from './routes/guia-7-niveis'
+import { Route as QuizDiagnosticoRouteImport } from './routes/quiz-diagnostico'
+import { Route as QuizDiagnosticoIndexRouteImport } from './routes/quiz-diagnostico.index'
+import { Route as QuizDiagnosticoBloco1RouteImport } from './routes/quiz-diagnostico.bloco-1'
+import { Route as QuizDiagnosticoBloco2RouteImport } from './routes/quiz-diagnostico.bloco-2'
+import { Route as QuizDiagnosticoBloco3RouteImport } from './routes/quiz-diagnostico.bloco-3'
+import { Route as QuizDiagnosticoInformacoesRouteImport } from './routes/quiz-diagnostico.informacoes'
+import { Route as QuizDiagnosticoResultadoRouteImport } from './routes/quiz-diagnostico.resultado'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +29,116 @@ const Guia7NiveisRoute = Guia7NiveisRouteImport.update({
   path: '/guia-7-niveis',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuizDiagnosticoRoute = QuizDiagnosticoRouteImport.update({
+  id: '/quiz-diagnostico',
+  path: '/quiz-diagnostico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizDiagnosticoIndexRoute = QuizDiagnosticoIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => QuizDiagnosticoRoute,
+} as any)
+const QuizDiagnosticoBloco1Route = QuizDiagnosticoBloco1RouteImport.update({
+  id: '/bloco-1',
+  path: '/bloco-1',
+  getParentRoute: () => QuizDiagnosticoRoute,
+} as any)
+const QuizDiagnosticoBloco2Route = QuizDiagnosticoBloco2RouteImport.update({
+  id: '/bloco-2',
+  path: '/bloco-2',
+  getParentRoute: () => QuizDiagnosticoRoute,
+} as any)
+const QuizDiagnosticoBloco3Route = QuizDiagnosticoBloco3RouteImport.update({
+  id: '/bloco-3',
+  path: '/bloco-3',
+  getParentRoute: () => QuizDiagnosticoRoute,
+} as any)
+const QuizDiagnosticoInformacoesRoute =
+  QuizDiagnosticoInformacoesRouteImport.update({
+    id: '/informacoes',
+    path: '/informacoes',
+    getParentRoute: () => QuizDiagnosticoRoute,
+  } as any)
+const QuizDiagnosticoResultadoRoute =
+  QuizDiagnosticoResultadoRouteImport.update({
+    id: '/resultado',
+    path: '/resultado',
+    getParentRoute: () => QuizDiagnosticoRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/guia-7-niveis': typeof Guia7NiveisRoute
+  '/quiz-diagnostico': typeof QuizDiagnosticoRouteWithChildren
+  '/quiz-diagnostico/bloco-1': typeof QuizDiagnosticoBloco1Route
+  '/quiz-diagnostico/bloco-2': typeof QuizDiagnosticoBloco2Route
+  '/quiz-diagnostico/bloco-3': typeof QuizDiagnosticoBloco3Route
+  '/quiz-diagnostico/informacoes': typeof QuizDiagnosticoInformacoesRoute
+  '/quiz-diagnostico/resultado': typeof QuizDiagnosticoResultadoRoute
+  '/quiz-diagnostico/': typeof QuizDiagnosticoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/guia-7-niveis': typeof Guia7NiveisRoute
+  '/quiz-diagnostico/bloco-1': typeof QuizDiagnosticoBloco1Route
+  '/quiz-diagnostico/bloco-2': typeof QuizDiagnosticoBloco2Route
+  '/quiz-diagnostico/bloco-3': typeof QuizDiagnosticoBloco3Route
+  '/quiz-diagnostico/informacoes': typeof QuizDiagnosticoInformacoesRoute
+  '/quiz-diagnostico/resultado': typeof QuizDiagnosticoResultadoRoute
+  '/quiz-diagnostico': typeof QuizDiagnosticoIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/guia-7-niveis': typeof Guia7NiveisRoute
+  '/quiz-diagnostico': typeof QuizDiagnosticoRouteWithChildren
+  '/quiz-diagnostico/bloco-1': typeof QuizDiagnosticoBloco1Route
+  '/quiz-diagnostico/bloco-2': typeof QuizDiagnosticoBloco2Route
+  '/quiz-diagnostico/bloco-3': typeof QuizDiagnosticoBloco3Route
+  '/quiz-diagnostico/informacoes': typeof QuizDiagnosticoInformacoesRoute
+  '/quiz-diagnostico/resultado': typeof QuizDiagnosticoResultadoRoute
+  '/quiz-diagnostico/': typeof QuizDiagnosticoIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/guia-7-niveis'
+  fullPaths:
+    | '/'
+    | '/guia-7-niveis'
+    | '/quiz-diagnostico'
+    | '/quiz-diagnostico/bloco-1'
+    | '/quiz-diagnostico/bloco-2'
+    | '/quiz-diagnostico/bloco-3'
+    | '/quiz-diagnostico/informacoes'
+    | '/quiz-diagnostico/resultado'
+    | '/quiz-diagnostico/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/guia-7-niveis'
-  id: '__root__' | '/' | '/guia-7-niveis'
+  to:
+    | '/'
+    | '/guia-7-niveis'
+    | '/quiz-diagnostico/bloco-1'
+    | '/quiz-diagnostico/bloco-2'
+    | '/quiz-diagnostico/bloco-3'
+    | '/quiz-diagnostico/informacoes'
+    | '/quiz-diagnostico/resultado'
+    | '/quiz-diagnostico'
+  id:
+    | '__root__'
+    | '/'
+    | '/guia-7-niveis'
+    | '/quiz-diagnostico'
+    | '/quiz-diagnostico/bloco-1'
+    | '/quiz-diagnostico/bloco-2'
+    | '/quiz-diagnostico/bloco-3'
+    | '/quiz-diagnostico/informacoes'
+    | '/quiz-diagnostico/resultado'
+    | '/quiz-diagnostico/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   Guia7NiveisRoute: typeof Guia7NiveisRoute
+  QuizDiagnosticoRoute: typeof QuizDiagnosticoRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +157,84 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Guia7NiveisRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quiz-diagnostico': {
+      id: '/quiz-diagnostico'
+      path: '/quiz-diagnostico'
+      fullPath: '/quiz-diagnostico'
+      preLoaderRoute: typeof QuizDiagnosticoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz-diagnostico/': {
+      id: '/quiz-diagnostico/'
+      path: '/'
+      fullPath: '/quiz-diagnostico/'
+      preLoaderRoute: typeof QuizDiagnosticoIndexRouteImport
+      parentRoute: typeof QuizDiagnosticoRoute
+    }
+    '/quiz-diagnostico/bloco-1': {
+      id: '/quiz-diagnostico/bloco-1'
+      path: '/bloco-1'
+      fullPath: '/quiz-diagnostico/bloco-1'
+      preLoaderRoute: typeof QuizDiagnosticoBloco1RouteImport
+      parentRoute: typeof QuizDiagnosticoRoute
+    }
+    '/quiz-diagnostico/bloco-2': {
+      id: '/quiz-diagnostico/bloco-2'
+      path: '/bloco-2'
+      fullPath: '/quiz-diagnostico/bloco-2'
+      preLoaderRoute: typeof QuizDiagnosticoBloco2RouteImport
+      parentRoute: typeof QuizDiagnosticoRoute
+    }
+    '/quiz-diagnostico/bloco-3': {
+      id: '/quiz-diagnostico/bloco-3'
+      path: '/bloco-3'
+      fullPath: '/quiz-diagnostico/bloco-3'
+      preLoaderRoute: typeof QuizDiagnosticoBloco3RouteImport
+      parentRoute: typeof QuizDiagnosticoRoute
+    }
+    '/quiz-diagnostico/informacoes': {
+      id: '/quiz-diagnostico/informacoes'
+      path: '/informacoes'
+      fullPath: '/quiz-diagnostico/informacoes'
+      preLoaderRoute: typeof QuizDiagnosticoInformacoesRouteImport
+      parentRoute: typeof QuizDiagnosticoRoute
+    }
+    '/quiz-diagnostico/resultado': {
+      id: '/quiz-diagnostico/resultado'
+      path: '/resultado'
+      fullPath: '/quiz-diagnostico/resultado'
+      preLoaderRoute: typeof QuizDiagnosticoResultadoRouteImport
+      parentRoute: typeof QuizDiagnosticoRoute
+    }
   }
 }
+
+interface QuizDiagnosticoRouteChildren {
+  QuizDiagnosticoBloco1Route: typeof QuizDiagnosticoBloco1Route
+  QuizDiagnosticoBloco2Route: typeof QuizDiagnosticoBloco2Route
+  QuizDiagnosticoBloco3Route: typeof QuizDiagnosticoBloco3Route
+  QuizDiagnosticoInformacoesRoute: typeof QuizDiagnosticoInformacoesRoute
+  QuizDiagnosticoResultadoRoute: typeof QuizDiagnosticoResultadoRoute
+  QuizDiagnosticoIndexRoute: typeof QuizDiagnosticoIndexRoute
+}
+
+const QuizDiagnosticoRouteChildren: QuizDiagnosticoRouteChildren = {
+  QuizDiagnosticoBloco1Route: QuizDiagnosticoBloco1Route,
+  QuizDiagnosticoBloco2Route: QuizDiagnosticoBloco2Route,
+  QuizDiagnosticoBloco3Route: QuizDiagnosticoBloco3Route,
+  QuizDiagnosticoInformacoesRoute: QuizDiagnosticoInformacoesRoute,
+  QuizDiagnosticoResultadoRoute: QuizDiagnosticoResultadoRoute,
+  QuizDiagnosticoIndexRoute: QuizDiagnosticoIndexRoute,
+}
+
+const QuizDiagnosticoRouteWithChildren = QuizDiagnosticoRoute._addFileChildren(
+  QuizDiagnosticoRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   Guia7NiveisRoute: Guia7NiveisRoute,
+  QuizDiagnosticoRoute: QuizDiagnosticoRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

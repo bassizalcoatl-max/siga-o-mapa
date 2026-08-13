@@ -5,3 +5,13 @@ directory = "netlify/functions"
   from = "/guia-7-niveis"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "/quiz-diagnostico/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/quiz-diagnostico"
+  to = "/index.html"
+  status = 200
